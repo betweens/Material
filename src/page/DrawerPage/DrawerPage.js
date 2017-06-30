@@ -41,9 +41,13 @@ class DrawerPage extends Component {
     	<AppBar title="Material-UI" showMenuIconButton={false} />
     	<div style={{paddingLeft: "16px" , fontSize: "16px", marginTop: "8px" }}>Version:</div>
     	<DropDownMenu {...versionConfig}>{Version}</DropDownMenu>
-    	<List>{LeftMenu}
-
-       </List>
+    	<List>
+    	  {LeftMenu}
+    	  <hr />
+    	  <ListItem key={1} primaryText="GitHub" />
+    	  <ListItem key={2} primaryText="React" />
+    	  <ListItem key={3} primaryText="Material Design" />
+    	</List>
     </Drawer>);
   }
 }
