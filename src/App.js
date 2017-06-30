@@ -1,21 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import registerServiceWorker from './registerServiceWorker';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+// 子页面
+import AppBarPage from './page/AppBarPage';
+import DrawerPage from './page/DrawerPage';
+// 路由配置
+const routes = [
+  { path: '/',
+    exact: true,
+    sidebar: () => <AppBarPage />,
+    main: () => <h2>主页</h2>
   }
-}
+]
 
-export default App;
+const routesArray = routes.map((route, index) => (<Route key={index} path={route.path}  exact={route.exact} component={route.sidebar} />));
+const App = () => (<Router><div>
+  <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+    <DrawerPage />
+  </MuiThemeProvider>
+  {routesArray}
+</div></Router>);
+
+
+injectTapEventPlugin();
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();
