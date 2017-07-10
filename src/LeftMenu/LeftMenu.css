@@ -1,0 +1,16 @@
+.flex-hrz {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-full {
+  flex: 1;
+}
+
+.flex-init {
+  flex: initial;
+}
+
+.left-menu {
+	width: 266px;
+}

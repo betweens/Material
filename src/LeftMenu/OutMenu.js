@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {List, ListItem} from 'material-ui/List';
-import Menudata from './Menudata';
+import Menudata from './MenuData.js';
 
 const getValue = (object) => {
   console.log(object); 

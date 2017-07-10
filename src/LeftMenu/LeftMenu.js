@@ -4,10 +4,9 @@ import {List, ListItem} from 'material-ui/List';
 import AppBar from 'material-ui/AppBar';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import Version from './Version';
-import LeftMenu from './LeftMenu';
-import './DrawerPage.css';
-console.log(LeftMenu);
-class DrawerPage extends Component {
+import OutMenu from './OutMenu.js';
+import './LeftMenu.css';
+class LeftMenu extends Component {
 	constructor(props) {
     super(props);
     this.state = {value: 1};
@@ -42,7 +41,7 @@ class DrawerPage extends Component {
     	<div style={{paddingLeft: "16px" , fontSize: "16px", marginTop: "8px" }}>Version:</div>
     	<DropDownMenu {...versionConfig}>{Version}</DropDownMenu>
     	<List>
-    	  {LeftMenu}
+    	  {OutMenu}
     	  <hr />
     	  <ListItem key={1} primaryText="GitHub" />
     	  <ListItem key={2} primaryText="React" />
@@ -52,4 +51,4 @@ class DrawerPage extends Component {
   }
 }
 
-export default DrawerPage;
+export default LeftMenu;
