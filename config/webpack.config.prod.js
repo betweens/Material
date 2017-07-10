@@ -197,6 +197,12 @@ module.exports = {
                   },
                 },
                 {
+                  loader: require.resolve('sass-loader'),
+                  options: {
+                    includePaths: [paths.appSrc]
+                  }
+                },
+                {
                   loader: require.resolve('postcss-loader'),
                   options: {
                     plugins: () => [

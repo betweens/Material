@@ -36,8 +36,8 @@ class LeftMenu extends Component {
 		  autoWidth: false,
 		}
     return (<Drawer {...drawerConfig}>
-    	<div className="top-bg"></div>
-    	<AppBar title="Material-UI" showMenuIconButton={false} />
+      <div className="top-bg"></div>
+    	<AppBar title="Material-UI" showMenuIconButton={false} style={{  marginTop: "40px" }}/>
     	<div style={{paddingLeft: "16px" , fontSize: "16px", marginTop: "8px" }}>Version:</div>
     	<DropDownMenu {...versionConfig}>{Version}</DropDownMenu>
     	<List>

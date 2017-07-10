@@ -5,7 +5,7 @@
 }
 
 :root {
-  font-size: 10px;
+  font-size: 15px;
   font-family: Helvetica, Arial, "Microsoft YaHei", "Droid Sans", sans-serif;
   text-size-adjust: 100%;
 }
@@ -104,6 +104,30 @@ table {
   flex: initial;
 }
 
+.styles-overriding-css-example {
+  width: 50% !important;
+  margin: 0 auto !important;
+  border: 2px solid #FF9800 !important;
+  background-color: #ffd699 !important;
+}
+
 .left-menu {
-	width: 266px;
+	width: 256px;
+}
+
+.top-bg {
+	height: 40px;
+  background-color: rgb(33, 150, 243);
+  display: flex;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1101;
+}
+
+.app-container {
+	padding-top: 40px;
 }

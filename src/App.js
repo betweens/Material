@@ -10,7 +10,7 @@ import {
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
-
+import AppBar from 'material-ui/AppBar';
 // 左侧菜单
 import LeftMenu from './LeftMenu';
 
@@ -25,6 +25,7 @@ const AppContainer = (props) => (
 
 // 路由集合
 const App = () => (<Router><section className="flex-hrz app-container">
+  <div className="top-bg">Aww yeah, Material-UI v1 is coming!</div>
   <div className="flex-init left-menu">
     <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
       <LeftMenu />
@@ -32,6 +33,7 @@ const App = () => (<Router><section className="flex-hrz app-container">
   </div>
   <AppContainer>
     <div className="flex-full right-content">
+      <AppBar showMenuIconButton={true} iconClassNameRight="muidocs-icon-navigation-expand-more" />
       <Route exact path="/" component={AppBarPage}/>
       <Route exact path="/app-bar" component={AppBarPage}/>
       <Route exact path="/required-knowledge" component={RequiredKnowledge}/>
