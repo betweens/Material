@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -11,23 +11,20 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 
-// 子页面
-import AppBarPage from './page/AppBarPage';
+// 左侧菜单
 import LeftMenu from './LeftMenu';
 
+// 子页面
+import AppBarPage from './page/AppBarPage';
+import RequiredKnowledge from './page/RequiredKnowledge';
 
 // 主容器
-class AppContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
+const AppContainer = (props) => (
+  <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>{props.children}</MuiThemeProvider>
+);
 
-  render() {
-    return <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>{this.props.children}</MuiThemeProvider>;
-  }
-}
-
-const App = () => (<Router><section className="app-container flex-hrz">
+// 路由集合
+const App = () => (<Router><section className="flex-hrz app-container">
   <div className="flex-init left-menu">
     <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
       <LeftMenu />
@@ -36,10 +33,12 @@ const App = () => (<Router><section className="app-container flex-hrz">
   <AppContainer>
     <div className="flex-full right-content">
       <Route exact path="/" component={AppBarPage}/>
-      <Route path="/app-bar" component={AppBarPage}/>
+      <Route exact path="/app-bar" component={AppBarPage}/>
+      <Route exact path="/required-knowledge" component={RequiredKnowledge}/>
     </div>
   </AppContainer>
 </section></Router>);
+
 
 injectTapEventPlugin();
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,3 +1,96 @@
+/* 重置浏览器默认样式和 */
+* {
+  box-sizing: border-box; /* 改变所有元素默认盒子模型 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* CC 去除默认边距和触摸高亮 */
+}
+
+:root {
+  font-size: 10px;
+  font-family: Helvetica, Arial, "Microsoft YaHei", "Droid Sans", sans-serif;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  user-select: none;
+}
+
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+figure,
+fieldset {
+  margin: 0;
+}
+
+ol,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+b,
+i,
+cite {
+  font-style: normal;
+  font-weight: normal;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* 清除浮动 */
+.ks-clear::after,
+.clear::after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: '\20';
+}
+
+.ks-clear,
+.clear {
+  *zoom: 1;
+}
+
+/* flex layout */
 .flex-hrz {
   display: flex;
   flex-flow: row wrap;

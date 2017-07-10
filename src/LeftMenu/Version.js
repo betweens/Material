@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MenuItem from 'material-ui/MenuItem';
 const versionArray =[
   'v0.18.5',
