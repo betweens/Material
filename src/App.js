@@ -11,6 +11,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import AppBar from 'material-ui/AppBar';
+import FlatButton from 'material-ui/FlatButton';
 // 左侧菜单
 import LeftMenu from './LeftMenu';
 
@@ -18,6 +19,10 @@ import LeftMenu from './LeftMenu';
 import AppBarPage from './page/AppBarPage';
 import RequiredKnowledge from './page/RequiredKnowledge';
 
+// 跳转github页面
+const goToGitHub = () => {
+  window.location.href = "https://github.com/betweens/Material";
+}
 // 主容器
 const AppContainer = (props) => (
   <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>{props.children}</MuiThemeProvider>
@@ -33,7 +38,7 @@ const App = () => (<Router><section className="flex-hrz app-container">
   </div>
   <AppContainer>
     <div className="flex-full right-content">
-      <AppBar showMenuIconButton={true} iconClassNameRight="muidocs-icon-navigation-expand-more" />
+      <AppBar showMenuIconButton={false} iconElementRight={<FlatButton label="github" onTouchTap={goToGitHub} />} />
       <Route exact path="/" component={AppBarPage}/>
       <Route exact path="/app-bar" component={AppBarPage}/>
       <Route exact path="/required-knowledge" component={RequiredKnowledge}/>
