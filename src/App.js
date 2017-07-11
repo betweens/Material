@@ -18,7 +18,7 @@ import LeftMenu from './LeftMenu';
 // 子页面
 import AppBarPage from './page/AppBarPage';
 import RequiredKnowledge from './page/RequiredKnowledge';
-
+import Installation from './page/Installation';
 // 跳转github页面
 const goToGitHub = () => {
   window.location.href = "https://github.com/betweens/Material";
@@ -42,6 +42,7 @@ const App = () => (<Router><section className="flex-hrz app-container">
       <Route exact path="/" component={AppBarPage}/>
       <Route exact path="/app-bar" component={AppBarPage}/>
       <Route exact path="/required-knowledge" component={RequiredKnowledge}/>
+      <Route exact path="/installation" component={Installation}/>
     </div>
   </AppContainer>
 </section></Router>);

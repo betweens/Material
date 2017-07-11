@@ -1,0 +1,6 @@
+{
+  "name": "PrintCode",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PrintCode.js"
+}
