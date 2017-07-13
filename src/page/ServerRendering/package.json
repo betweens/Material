@@ -1,0 +1,6 @@
+{
+  "name": "ServerRendering",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ServerRendering.js"
+}

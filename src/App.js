@@ -19,6 +19,9 @@ import LeftMenu from './LeftMenu';
 import AppBarPage from './page/AppBarPage';
 import RequiredKnowledge from './page/RequiredKnowledge';
 import Installation from './page/Installation';
+import Usage from './page/Usage';
+import ServerRendering from './page/ServerRendering';
+
 // 跳转github页面
 const goToGitHub = () => {
   window.location.href = "https://github.com/betweens/Material";
@@ -43,6 +46,8 @@ const App = () => (<Router><section className="flex-hrz app-container">
       <Route exact path="/app-bar" component={AppBarPage}/>
       <Route exact path="/required-knowledge" component={RequiredKnowledge}/>
       <Route exact path="/installation" component={Installation}/>
+      <Route exact path="/usage" component={Usage}/>
+      <Route exact path="/server-rendering" component={ServerRendering}/>
     </div>
   </AppContainer>
 </section></Router>);
