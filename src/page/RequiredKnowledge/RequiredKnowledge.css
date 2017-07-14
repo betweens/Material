@@ -58,4 +58,15 @@
   	color: #4078c0;
     text-decoration: none;
   }
+
+  .border-code {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    border-radius: 2px;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
 }

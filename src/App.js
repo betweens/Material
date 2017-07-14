@@ -10,6 +10,7 @@ import {
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 // 左侧菜单
@@ -21,6 +22,14 @@ import RequiredKnowledge from './page/RequiredKnowledge';
 import Installation from './page/Installation';
 import Usage from './page/Usage';
 import ServerRendering from './page/ServerRendering';
+import Themes from './page/Themes';
+
+let appTheme = lightBaseTheme;
+/*window.custom = () => {
+ 
+ ReactDOM.render(<App />, document.getElementById('root'));
+}
+*/
 
 // 跳转github页面
 const goToGitHub = () => {
@@ -28,19 +37,19 @@ const goToGitHub = () => {
 }
 // 主容器
 const AppContainer = (props) => (
-  <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>{props.children}</MuiThemeProvider>
+  <MuiThemeProvider muiTheme={getMuiTheme(appTheme)}>{props.children}</MuiThemeProvider>
 );
 
 // 路由集合
 const App = () => (<Router><section className="flex-hrz app-container">
-  <div className="top-bg">Aww yeah, Material-UI v1 is coming!</div>
   <div className="flex-init left-menu">
-    <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+    <MuiThemeProvider muiTheme={getMuiTheme(appTheme)}>
       <LeftMenu />
     </MuiThemeProvider>
   </div>
   <AppContainer>
     <div className="flex-full right-content">
+      <div className="top-bg">Aww yeah, Material-UI v1 is coming!</div>
       <AppBar showMenuIconButton={false} iconElementRight={<FlatButton label="github" onTouchTap={goToGitHub} />} />
       <Route exact path="/" component={AppBarPage}/>
       <Route exact path="/app-bar" component={AppBarPage}/>
@@ -48,6 +57,7 @@ const App = () => (<Router><section className="flex-hrz app-container">
       <Route exact path="/installation" component={Installation}/>
       <Route exact path="/usage" component={Usage}/>
       <Route exact path="/server-rendering" component={ServerRendering}/>
+      <Route exact path="/themes" component={Themes}/>
     </div>
   </AppContainer>
 </section></Router>);

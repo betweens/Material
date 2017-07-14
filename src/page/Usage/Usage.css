@@ -1,3 +1,9 @@
-.usage{
- 
+.usage {
+  .flex-hrz {
+  	text-align: center;
+  }
+
+  .flex-hrz > div {
+  	margin: 16px;
+  }
 }
