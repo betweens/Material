@@ -26,6 +26,7 @@ import Colors from './page/Colors';
 import ServerRendering from './page/ServerRendering';
 import Themes from './page/Themes';
 import Styles from './page/Styles';
+import AutoComplete from './page/AutoComplete';
 let appTheme = lightBaseTheme;
 /*window.custom = () => {
  
@@ -63,6 +64,7 @@ const App = () => (<Router><section className="flex-hrz app-container">
       <Route exact path="/themes" component={Themes}/>
       <Route exact path="/styles" component={Styles}/>
       <Route exact path="/colors" component={Colors}/>
+      <Route exact path="/auto-complete" component={AutoComplete}/>
     </div>
   </AppContainer>
 </section></Router>);
