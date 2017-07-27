@@ -1,0 +1,6 @@
+{
+  "name": "PropertiesList",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PropertiesList.js"
+}
