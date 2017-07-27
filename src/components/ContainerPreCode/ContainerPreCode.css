@@ -22,10 +22,16 @@
     background-color: rgb(232, 232, 232);
     height: 56px;
     padding: 0px 24px;
+    cursor: pointer;
   }
 
   .show-examples {
     padding: 14px 24px 24px;
     background-color: #fff;
+  }
+
+  .toggle-pannel {
+    width: 100%;
+    overflow: hidden;
   }
 }
