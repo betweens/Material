@@ -9,18 +9,41 @@ import './LeftMenu.css';
 class LeftMenu extends Component {
 	constructor(props) {
     super(props);
-    this.state = {value: 1};
+    this.state = {
+      value: 1,
+      open: true,
+    };
     this.handleChange = this.handleChange.bind(this);
+    this.listenInWindowSize = this.listenInWindowSize.bind(this);
   }
   // 选择版本
   handleChange(event, index, value) {
     this.setState({ value });
   }
+  componentWillMount() {
+    window.onresize = this.listenInWindowSize;
+  }
+
+  componentDidMount() {
+    this.listenInWindowSize();
+  }
+
+  listenInWindowSize () {
+    const size = window.innerWidth;
+    if (size < 996) {
+      if (this.state.open === false) return;
+      this.setState({
+        open: false,
+      })
+    }
+  }
+  
   render() {
     // 左侧导航栏配置
     const drawerConfig = {
-		  open: true,
+		  open: this.state.open,
 		  disableSwipeToOpen: true,
+      className: this.state.open ? 'flex-init left-menu' : 'flex-init',
 		}
 		// 版本选择框宽度
 		const styles = {

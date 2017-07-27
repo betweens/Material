@@ -45,14 +45,11 @@ const AppContainer = (props) => (
 
 // 路由集合
 const App = () => (<Router><section className="flex-hrz app-container">
-  <div className="flex-init left-menu">
-    <MuiThemeProvider muiTheme={getMuiTheme(appTheme)}>
-      <LeftMenu />
-    </MuiThemeProvider>
-  </div>
+  <div className="top-bg">Aww yeah, Material-UI v1 is coming!</div>
+  <MuiThemeProvider muiTheme={getMuiTheme(appTheme)}><LeftMenu /></MuiThemeProvider>
   <AppContainer>
-    <div className="flex-full right-content">
-      <div className="top-bg">Aww yeah, Material-UI v1 is coming!</div>
+    <div className="flex-full">
+ 
       <AppBar showMenuIconButton={false} iconElementRight={<FlatButton label="github" onTouchTap={goToGitHub} />} />
       <Route exact path="/" component={AppBarPage}/>
       <Route exact path="/app-bar" component={AppBarPage}/>
