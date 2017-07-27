@@ -14,7 +14,7 @@ html,
 body {
   position: relative;
   height: 100%;
-  user-select: none;
+/*  user-select: none;*/
 }
 
 body,
@@ -29,6 +29,7 @@ h6,
 p,
 form,
 figure,
+pre,
 fieldset {
   margin: 0;
 }
@@ -130,4 +131,11 @@ table {
 
 .app-container {
 	padding-top: 40px;
+}
+
+.a-block {
+  a {
+    display: block;
+    width: 100%;
+  }
 }

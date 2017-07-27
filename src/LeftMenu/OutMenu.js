@@ -10,7 +10,7 @@ const ResultMenu = (data) => {
 	  if (value.childItem) {
 	    return <ListItem key={`title-${index}`}  initiallyOpen={value.label === "Components"} primaryText={value.explain} primaryTogglesNestedList={true} nestedItems={ResultMenu(value.childItem)}/>	
 	  } else {
-	    return <ListItem key={`path-${index}`} children={<Link key={index} to={value.path}>{value.explain}</Link>} primaryTogglesNestedList={true} />	
+	    return <ListItem key={`path-${index}`} className="a-block" children={<Link key={index} to={value.path}>{value.explain}</Link>} primaryTogglesNestedList={true} />	
 	  }
 	});
 	return temp;

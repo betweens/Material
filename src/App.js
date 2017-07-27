@@ -21,9 +21,11 @@ import AppBarPage from './page/AppBarPage';
 import RequiredKnowledge from './page/RequiredKnowledge';
 import Installation from './page/Installation';
 import Usage from './page/Usage';
+import Examples from './page/Examples';
+import Colors from './page/Colors';
 import ServerRendering from './page/ServerRendering';
 import Themes from './page/Themes';
-
+import Styles from './page/Styles';
 let appTheme = lightBaseTheme;
 /*window.custom = () => {
  
@@ -56,8 +58,11 @@ const App = () => (<Router><section className="flex-hrz app-container">
       <Route exact path="/required-knowledge" component={RequiredKnowledge}/>
       <Route exact path="/installation" component={Installation}/>
       <Route exact path="/usage" component={Usage}/>
+      <Route exact path="/examples" component={Examples}/>
       <Route exact path="/server-rendering" component={ServerRendering}/>
       <Route exact path="/themes" component={Themes}/>
+      <Route exact path="/styles" component={Styles}/>
+      <Route exact path="/colors" component={Colors}/>
     </div>
   </AppContainer>
 </section></Router>);

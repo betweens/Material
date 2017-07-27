@@ -1,0 +1,6 @@
+{
+  "name": "Styles",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Styles.js"
+}

@@ -102,7 +102,15 @@ module.exports = {
       new ModuleScopePlugin(paths.appSrc),
     ],
   },
+  // externals: [{
+  //   react: 'React',
+  // }, {
+  //   'react-dom': 'ReactDOM',
+  // }, {
+  //   'react-router-dom': 'ReactRouterDOM',
+  // }],
   module: {
+    // noParse: /react-dom|react|react-router-dom/,
     strictExportPresence: true,
     rules: [
       // TODO: Disable require.ensure as it's not a standard language feature.

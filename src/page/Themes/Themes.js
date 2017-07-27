@@ -166,7 +166,7 @@ export default {
         </div>
       </div>
       <h3>预定义主题</h3>
-      <p>我们用Material-UI有两个基础主题：浅色和黑暗。 它们位于<a href="https://github.com/callemall/material-ui/blob/master/src/styles/baseThemes/">material-ui/styles/baseThemes/</a>下。 自定义主题可以类似地定义。 <a href="https://github.com/callemall/material-ui/blob/master/src/styles/baseThemes/lightBaseTheme.js">lightBaseTheme</a>是默认的，所以除了使用<span className="code">MuiThemeProvider</span>之外，您不需要执行任何操作即可使用它。 对于<a hef="https://github.com/callemall/material-ui/blob/master/src/styles/baseThemes/darkBaseTheme.js">darkBaseTheme</a>，您可以使用此代码段：</p>
+      <p>我们用Material-UI有两个基础主题：浅色和黑暗。 它们位于<a href="https://github.com/callemall/material-ui/blob/master/src/styles/baseThemes/">material-ui/styles/baseThemes/</a>下。 自定义主题可以类似地定义。 <a href="https://github.com/callemall/material-ui/blob/master/src/styles/baseThemes/lightBaseTheme.js">lightBaseTheme</a>是默认的，所以除了使用<span className="code">MuiThemeProvider</span>之外，您不需要执行任何操作即可使用它。 对于<a href="https://github.com/callemall/material-ui/blob/master/src/styles/baseThemes/darkBaseTheme.js">darkBaseTheme</a>，您可以使用此代码段：</p>
       <PrintCode code={themesCode} />
       <h3>怎么运行的</h3>
       <p>为了实现上述示例中可以看到的可定制级别，<span className="code">Material-UI</span>正在使用一个名为<span className="code">muiTheme</span>的单个JS对象。 默认情况下，此<span className="code">muiTheme</span>对象基于<a href="https://github.com/callemall/material-ui/blob/master/src/styles/baseThemes/lightBaseTheme.js">lightBaseTheme</a>。</p>
