@@ -135,106 +135,106 @@ export default FlatButtonExampleIcon;`;
       	'backgroundColor',
       	'string',
       	'',
-      	'Color of button when mouse is not hovering over it.',
+      	'当鼠标悬停在其上时，按钮的颜色。',
       ], [
       	'children',
       	'node',
-      	'',
-      	'This is what will be displayed inside the button. If a label is specified, the text within the label prop will be displayed. Otherwise, the component will expect children which will then be displayed. (In our example, we are nesting an <input type="file" /> and a span that acts as our label to be displayed.) This only applies to flat and raised buttons.',
+        '',
+      	'这是按钮内将显示的内容。 如果指定了标签，将显示标签内的文字。 否则，组件将期望将显示的子元素。 （在我们的示例中，我们正在嵌套一个<input type =“file”/>和作为我们的标签显示的跨度。）这仅适用于平面和凸起的按钮。',
       ], [
       	'className',
       	'string',
       	'',
-      	'The CSS class name of the root element.',
+      	'根元素的CSS类名称。',
       ], [
       	'containerElement',
       	'union: string element',
       	'',
-      	'The element to use as the container for the FlatButton. Either a string to use a DOM element or a ReactElement. This is useful for wrapping the FlatButton in a custom Link component. If a ReactElement is given, ensure that it passes all of its given props through to the underlying DOM element and renders its children prop for proper integration.',
+      	'用作FlatButton的容器的元素。 使用DOM元素或ReactElement的字符串。 这对于将FlatButton包装在自定义链接组件中很有用。 如果给出了一个ReactElement，请确保它将所有给定的props传递到基础的DOM元素，并使其子进程正确集成。',
       ], [
       	'disableTouchRipple',
       	'bool',
-      	'',
-      	'If true, the element‘s ripple effect will be disabled.',
+      	'false',
+      	'如果为true，则元素的纹波效果将被禁用。',
       ], [
       	'disabled',
       	'bool',
       	'false',
-      	'Disables the button if set to true.',
+      	'如果为true，该按钮将被禁用。',
       ], [
       	'fullWidth',
       	'bool',
       	'false',
-      	'If true, the button will take up the full width of its container.',
+      	'如果为true, 该按钮将占据其容器的全部宽度。',
       ], [
       	'hoverColor',
       	'string',
       	'',
-      	'Color of button when mouse hovers over.',
+      	'鼠标悬停时按钮的颜色。',
       ], [
         'href',
         'string',
         '',
-        'The URL to link to when the button is clicked',
+        '当按钮被点击时要链接的URL',
       ], [
         'icon',
         'string',
         '',
-        'Use this property to display an icon.',
+        '使用此属性显示图标。',
       ], [
         'label',
         'validateLabel',
         '',
-        'Label for the button.',
+        '标签的按钮。',
       ], [
         'label',
         "enum: 'before' 'after' 'after'",
         '',
-        'Place label before or after the passed children.',
+        '在通过的子元素之前或之后放置标签。',
       ], [
         'labelStyle',
         'object',
         '{}',
-        'Override the inline-styles of the button”s label element.',
+        '覆盖按钮的标签元素的内联样式。',
       ], [
         'onKeyboardFocus',
         'function',
         '() => {}',
-        <div>Callback function fired when the element is focused or blurred by the keyboard.<br />
+        <div>当元素被键盘聚焦或失焦时，回调功能被触发。<br />
           Signature:<br />
           function(event: object, isKeyboardFocused: boolean) => void<br />
-          event: focus or blur event targeting the element.<br />
-          isKeyboardFocused: Indicates whether the element is focused.
+          event: 针对元素的聚焦或失焦时事件。<br />
+          isKeyboardFocused: 指示元素是否聚焦。
         </div>,
       ], [
         'onTouchTap',
         'function',
         '() => {}',
-        <div>Callback function fired when the button is touch-tapped.<br />
+        <div>触摸按钮时触发回调功能。<br />
           Signature:<br />
           function(event: object) => void<br />
-          event: TouchTap event targeting the button.
+          event: TouchTap事件定位按钮。
         </div>,
       ], [
         'primary',
         'bool',
         'false',
-        'If true, colors button according to primaryTextColor from the Theme.',
+        '如果为true，则颜色按照主题的primaryTextColor按钮。',
       ], [
         'rippleColor',
         'string',
         'false',
-        'Color for the ripple after button is clicked.',
+        '单击按钮后，纹波的颜色。',
       ], [
         'secondary',
         'string',
         'false',
-        'If true, colors button according to secondaryTextColor from the theme. The primary prop has precendent if set to true.',
+        '如果是true，颜色按钮按照secondaryTextColor从主题。 The primary prop has precendent if set to true.',
       ], [
         'style',
         'object',    
         '', 
-        'Override the inline-styles of the root element.'
+        '覆盖根元素的内联样式。'
       ]]
 		};
     return (<div>

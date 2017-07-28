@@ -95,12 +95,12 @@ const Menudata = [
                     }, 
                     {
                         "label": "Raised Button", 
-                        "explain": "响应按钮（波纹效果）", 
+                        "explain": "Raised Button", 
                         "path": "raised-button"
                     }, 
                     {
                         "label": "Floating Action Button", 
-                        "explain": "浮动按钮", 
+                        "explain": "Floating Action Button", 
                         "path": "floating-action-button"
                     }, 
                     {
