@@ -4,7 +4,7 @@ import {
 	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
-} from '../../components'
+} from '../../../components'
 import AutoComplete from 'material-ui/AutoComplete';
 import MenuItem from 'material-ui/MenuItem';
 // import './AutoComplete.css';

@@ -4,7 +4,7 @@ import {
 	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
-} from '../../components'
+} from '../../../components'
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';

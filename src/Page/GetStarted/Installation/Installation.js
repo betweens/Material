@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Installation.css';
-import { PrintCode, FooterBanner } from '../../components/index.js';
+import { PrintCode, FooterBanner } from '../../../components';
 const Installation = () => {
   const code = `import injectTapEventPlugin from 'react-tap-event-plugin';\n
 

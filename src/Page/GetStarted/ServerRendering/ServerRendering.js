@@ -1,6 +1,6 @@
 import React from 'react';
 // import './ServerRendering.css';
-import { FooterBanner } from '../../components/index.js';
+import { FooterBanner } from '../../../components';
 const ServerRendering = () => {
   return (<div>
     <div className="markdown-body">

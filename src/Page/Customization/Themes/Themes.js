@@ -1,5 +1,5 @@
 import React from 'react';
-import { PrintCode, FooterBanner } from '../../components/index.js';
+import { PrintCode, FooterBanner } from '../../../components';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Slider from 'material-ui/Slider';
 import FlatButton from 'material-ui/FlatButton';

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Colors.css';
-import { FooterBanner } from '../../components/index.js';
+import { FooterBanner } from '../../../components';
 import { colors } from 'material-ui/styles';
 const Styles = () => {
   const li = [];

@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Usage.css';
-import { PrintCode, FooterBanner } from '../../components/index.js';
+import { PrintCode, FooterBanner } from '../../../components';
 const Styles = () => {
   const codeApp = `import React from 'react';
 import ReactDOM from 'react-dom';

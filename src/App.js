@@ -5,34 +5,32 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {
   BrowserRouter as Router,
   Route,
-  // Link
 } from 'react-router-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+// import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 // 左侧菜单
-import LeftMenu from './LeftMenu';
+import LeftMenu from './Page/LeftMenu';
+// 开始使用
+import RequiredKnowledge from './Page/GetStarted/RequiredKnowledge';
+import Installation from './Page/GetStarted/Installation';
+import Examples from './Page/GetStarted/Examples';
+import ServerRendering from './Page/GetStarted/ServerRendering';
+// 自定义设置
+import Usage from './Page/Customization/Usage';
+import Colors from './Page/Customization/Colors';
+import Themes from './Page/Customization/Themes';
+import Styles from './Page/Customization/Styles';
+// 组件列表
+import AppBarPage from './Page/Components/AppBarPage';
+import AutoComplete from './Page/Components/AutoComplete';
+import Avatar from './Page/Components/Avatar';
+import Badge from './Page/Components/Badge';
 
-// 子页面
-import AppBarPage from './page/AppBarPage';
-import RequiredKnowledge from './page/RequiredKnowledge';
-import Installation from './page/Installation';
-import Usage from './page/Usage';
-import Examples from './page/Examples';
-import Colors from './page/Colors';
-import ServerRendering from './page/ServerRendering';
-import Themes from './page/Themes';
-import Styles from './page/Styles';
-import AutoComplete from './page/AutoComplete';
 let appTheme = lightBaseTheme;
-/*window.custom = () => {
- 
- ReactDOM.render(<App />, document.getElementById('root'));
-}
-*/
 
 // 跳转github页面
 const goToGitHub = () => {
@@ -49,7 +47,6 @@ const App = () => (<Router><section className="flex-hrz app-container">
   <MuiThemeProvider muiTheme={getMuiTheme(appTheme)}><LeftMenu /></MuiThemeProvider>
   <AppContainer>
     <div className="flex-full">
- 
       <AppBar showMenuIconButton={false} iconElementRight={<FlatButton label="github" onTouchTap={goToGitHub} />} />
       <Route exact path="/" component={AppBarPage}/>
       <Route exact path="/app-bar" component={AppBarPage}/>
@@ -62,9 +59,14 @@ const App = () => (<Router><section className="flex-hrz app-container">
       <Route exact path="/styles" component={Styles}/>
       <Route exact path="/colors" component={Colors}/>
       <Route exact path="/auto-complete" component={AutoComplete}/>
+      <Route exact path="/avatar" component={Avatar}/>
+      <Route exact path="/badge" component={Badge}/>
     </div>
   </AppContainer>
 </section></Router>);
+/*window.custom = () => {
+ ReactDOM.render(<App />, document.getElementById('root'));
+}*/
 
 
 injectTapEventPlugin();

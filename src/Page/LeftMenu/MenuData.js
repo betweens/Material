@@ -67,6 +67,11 @@ const Menudata = [
                 "label": "Auto Complete", 
                 "explain": "自动补全", 
                 "path": "auto-complete"
+            },
+            {
+                "label": "Avatar",
+                "explain": "Avatar", 
+                "path": "avatar"
             }, 
             {
                 "label": "Badge", 

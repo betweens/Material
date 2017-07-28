@@ -1,6 +1,6 @@
 import React from 'react';
 // import './ServerRendering.css';
-import { PrintCode, FooterBanner } from '../../components/index.js';
+import { PrintCode, FooterBanner } from '../../../components';
 const ServerRendering = () => {
   const muiTheme = `import React from 'react';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
