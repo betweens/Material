@@ -14,10 +14,14 @@ const paths = require('./paths');
 const getClientEnvironment = require('./env');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
+// Webpack使用`publicPath'来确定应用程序在哪里发送。
 // It requires a trailing slash, or the file assets will get an incorrect path.
+// 它需要一个尾部斜线，要么文件资产将获得不正确的路径。
 const publicPath = paths.servedPath;
 // Some apps do not use client-side routing with pushState.
+// 一些应用程序不使用带有pushState的客户端路由。
 // For these, "homepage" can be set to "." to enable relative asset paths.
+// 对于这些，"homepage"可以设置为“”。 以启用相对资产路径。
 const shouldUseRelativeAssetPaths = publicPath === './';
 // `publicUrl` is just like `publicPath`, but we will provide it to our app
 // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
@@ -38,24 +42,34 @@ if (env.stringified['process.env'].NODE_ENV !== '"production"') {
 const cssFilename = 'static/css/[name].[contenthash:8].css';
 
 // ExtractTextPlugin expects the build output to be flat.
+// ExtractTextPlugin期望构建输出是平坦的。
 // (See https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/27)
 // However, our output is structured with css, js and media folders.
+// 但是，我们的输出结构是使用css，js和media文件夹。
 // To have this structure working with relative paths, we have to use custom options.
+// 要使这个结构使用相对路径，我们必须使用自定义选项。
 const extractTextPluginOptions = shouldUseRelativeAssetPaths
-  ? // Making sure that the publicPath goes back to to build folder.
+  ? // Making sure that the publicPath goes back to to build folder. // 确保publicPath返回到构建文件夹。
     { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
 
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
+// 这是生产配置。
+// 它慢慢编译，专注于生成一个快速和最小的包。
+// 开发配置是不同的，并且生活在一个单独的文件中。
 module.exports = {
   // Don't attempt to continue if there are any errors.
+  // 如果有任何错误，请勿尝试继续。
   bail: true,
   // We generate sourcemaps in production. This is slow but gives good results.
   // You can exclude the *.map files from the build during deployment.
-  devtool: 'source-map',
+  // 我们在生产中生成源图。 这很慢但给出了很好的结果。
+  // 您可以在部署期间从构建中排除* .map文件。
+  // devtool: 'source-map',
   // In production, we only want to load the polyfills and the app code.
+  // 在生产中，我们只想加载polyfills和应用程序代码。
   entry: [require.resolve('./polyfills'), paths.appIndexJs],
   output: {
     // The build folder.
@@ -66,20 +80,20 @@ module.exports = {
     filename: 'static/js/[name].[chunkhash:8].js',
     chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
     // We inferred the "public path" (such as / or /my-project) from homepage.
-    publicPath: publicPath,
+    publicPath: 'http://www.no-forget.com/material',
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
       path
         .relative(paths.appSrc, info.absoluteResourcePath)
         .replace(/\\/g, '/'),
   },
-  externals: [{
+  /*externals: [{
     react: 'React',
   }, {
     'react-dom': 'ReactDOM',
   }, {
     'react-router-dom': 'ReactRouterDOM',
-  }],
+  }],*/
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
     // We placed these paths second because we want `node_modules` to "win"
