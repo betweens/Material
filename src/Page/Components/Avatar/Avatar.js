@@ -189,7 +189,6 @@ export default AvatarExampleSimple;`;
 	      <ContainerPreCode title="Examples">
 	        <PrintCode code={examplesCode} />
           <div className="show-examples">
-	          <p>AppBar的一个简单示例，右侧有一个图标。 默认情况下，左侧图标是导航菜单。</p>
 	          <p>使用<span className="code">Avatar</span>的图像的示例，<a href="http://www.material-ui.com/#/components/font-icon">Font Icon</a>，<a href="http://www.material-ui.com/#/components/svg-icon">SVG Icon</a>和“Letter”（字符串），具有和不具有默认大小（<span className="code">40dp</span>）的自定义颜色和备用大小（<span className="code">430dp</span>）。</p>
 	          <List>
 					    <ListItem
