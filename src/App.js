@@ -29,7 +29,7 @@ import AppBarPage from './Page/Components/AppBarPage';
 import AutoComplete from './Page/Components/AutoComplete';
 import Avatar from './Page/Components/Avatar';
 import Badge from './Page/Components/Badge';
-
+import BottomNavigation from './Page/Components/BottomNavigation';
 let appTheme = lightBaseTheme;
 
 // 跳转github页面
@@ -61,6 +61,7 @@ const App = () => (<Router><section className="flex-hrz app-container">
       <Route exact path="/auto-complete" component={AutoComplete}/>
       <Route exact path="/avatar" component={Avatar}/>
       <Route exact path="/badge" component={Badge}/>
+      <Route exact path="/bottom-navigation" component={BottomNavigation}/>
     </div>
   </AppContainer>
 </section></Router>);
