@@ -2,6 +2,7 @@
   "name": "material",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://www.no-forget.com/material",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
