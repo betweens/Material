@@ -140,42 +140,116 @@ export default RaisedButtonExampleIcon;`;
       	'backgroundColor',
       	'string',
       	'',
-      	'头像的backgroundColor。 不适用于图像头像。',
+      	'覆盖按钮的默认背景颜色，但不是默认的禁用背景颜色（使用disabledBackgroundColor为此）。',
+      ], [
+      	'buttonStyle',
+      	'object',
+      	'',
+      	'覆盖按钮元素的内联样式。',
       ], [
       	'children',
       	'node',
       	'',
-      	'可以使用，例如，在头像内呈现一个字母。',
+      	'按钮的内容。 如果通过标签支架提供标签，除了此处提供的内容之外，还将显示标签内的文本。',
       ], [
       	'className',
       	'string',
       	'',
-      	'根div或img元素的css类名。',
+      	'根元素的CSS类名称。',
       ], [
-      	'color',
+      	'containerElement',
+      	'union: string element',
+      	'',
+      	'用作RaisedButton的容器的元素。 使用DOM元素或ReactElement的字符串。 这对于将RaisedButton包装在自定义的Link组件中很有用。 如果给出了一个ReactElement，请确保它将所有给定的道具传递到基础的DOM元素，并使其子进程正确集成。',
+      ], [
+      	'disableTouchRipple',
+      	'bool',
+      	'',
+      	'如果为true，则元素的纹波效果将被禁用。',
+      ], [
+      	'disabled',
+      	'string',
+      	'false',
+      	'如果为true，该按钮将被禁用。',
+      ], [
+      	'disabledBackgroundColor',
       	'string',
       	'',
-      	'图标或字母颜色。',
+      	'覆盖按钮禁用时的默认背景颜色。',
       ], [
-      	'icon',
-      	'element',
-      	'',
-      	'这是在头像中使用的SvgIcon或FontIcon。',
+        'disabledLabelColor',
+        'string',
+        '',
+        '当按钮被禁用时，按钮的标签的颜色。',
       ], [
-      	'size',
-      	'number',
-      	'40',
-      	'这是头像的大小，以像素为单位。',
+        'fullWidth',
+        'bool',
+        'false',
+        '如果为true，按钮将占据其容器的全部宽度。',
       ], [
-      	'src',
-      	'string',
-      	'',
-      	'如果传入，该组件将呈现一个img元素。 否则，将渲染一个div。',
+        'href',
+        'string',
+        '',
+        '当点击按钮时只想这个URL的链接',
       ], [
-      	'style',
-      	'object',
-      	'',
-      	'覆盖根元素的内联样式。',
+        'icon',
+        'node',
+        '',
+        '在按钮内显示的图标。',
+      ], [
+        'label',
+        'validateLabel',
+        '',
+        '要在按钮中显示的标签。 如果通过child props提供内容，除了此处提供的标签之外，还将显示该内容。',
+      ], [
+        'labelColor',
+        'string',
+        '',
+        '按钮的标签颜色。',
+      ], [
+        'labelPosition',
+        'string',
+        "enum: 'before' 'after' 'after'",
+        '按钮的标签相对于按钮的child的位置。',
+      ], [
+        'labelStyle',
+        'object',
+        '',
+        '覆盖按钮的标签元素的内联样式。',
+      ], [
+        'onTouchTap',
+        'function',
+        '',
+        <div>触摸按钮时触发回调功能。<br />
+          Signature:
+          function(event: object) => void
+          event: TouchTap事件定位按钮。
+        </div>,
+      ], [
+        'overlayStyle',
+        'object',
+        '',
+        '覆盖按钮叠加层的内联样式。',
+      ], [
+        'primary',
+        'bool',
+        'false',
+        '如果为真,该按钮将使用主题的primary颜色。',
+      ], [
+        'rippleStyle',
+        'object',
+        '',
+        '覆盖波纹元素的内联样式。',
+      ], [
+        'secondary',
+        'bool',
+        '',
+        '如果为true，按钮将使用主题的secondary颜色。 如果secondary和primary都是true，按钮将使用主题的primary颜色。',
+      ], [
+        'style',
+        'object',
+        '',
+        '覆盖根元素的内联样式。',
       ]]
 		};
     return (<div>

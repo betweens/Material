@@ -32,6 +32,7 @@ import Badge from './Page/Components/Badge';
 import BottomNavigation from './Page/Components/BottomNavigation';
 import FlatButtonPage from './Page/Components/FlatButton';
 import RaisedButton from './Page/Components/RaisedButton';
+import FloatingActionButton from './Page/Components/FloatingActionButton';
 let appTheme = lightBaseTheme;
 
 // 跳转github页面
@@ -65,7 +66,8 @@ const App = () => (<Router><section className="flex-hrz app-container">
       <Route exact path="/badge" component={Badge}/>
       <Route exact path="/bottom-navigation" component={BottomNavigation}/>
       <Route exact path="/flat-button" component={FlatButtonPage}/>
-      <Route exact path="/raised-button" component={RaisedButton}/>
+      <Route exact path="/raised-button" component={RaisedButton}/> 
+      <Route exact path="/floating-action-button" component={FloatingActionButton}/>
     </div>
   </AppContainer>
 </section></Router>);

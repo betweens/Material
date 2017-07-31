@@ -1,0 +1,6 @@
+{
+  "name": "FloatingActionButton",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./FloatingActionButton.js"
+}

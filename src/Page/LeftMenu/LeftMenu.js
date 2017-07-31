@@ -35,6 +35,11 @@ class LeftMenu extends Component {
       this.setState({
         open: false,
       })
+    } else {
+      if (this.state.open) return;
+      this.setState({
+        open: true,
+      })
     }
   }
   
