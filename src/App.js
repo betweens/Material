@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {
   BrowserRouter as Router,
@@ -34,23 +34,17 @@ import FlatButtonPage from './Page/Components/FlatButton';
 import RaisedButton from './Page/Components/RaisedButton';
 import FloatingActionButton from './Page/Components/FloatingActionButton';
 let appTheme = lightBaseTheme;
-
-// 跳转github页面
-const goToGitHub = () => {
-  window.location.href = "https://github.com/betweens/Material";
-}
 // 主容器
 const AppContainer = (props) => (
   <MuiThemeProvider muiTheme={getMuiTheme(appTheme)}>{props.children}</MuiThemeProvider>
 );
-
 // 路由集合
 const App = () => (<Router><section className="flex-hrz app-container">
   <div className="top-bg">Aww yeah, Material-UI v1 is coming!</div>
   <MuiThemeProvider muiTheme={getMuiTheme(appTheme)}><LeftMenu /></MuiThemeProvider>
   <AppContainer>
     <div className="flex-full">
-      <AppBar showMenuIconButton={false} iconElementRight={<FlatButton label="github" onTouchTap={goToGitHub} />} />
+      <AppBar showMenuIconButton={false} iconElementRight={<FlatButton label="github" href="https://github.com/betweens/Material" />} />
       <Route exact path="/" component={AppBarPage}/>
       <Route exact path="/app-bar" component={AppBarPage}/>
       <Route exact path="/required-knowledge" component={RequiredKnowledge}/>
@@ -71,11 +65,7 @@ const App = () => (<Router><section className="flex-hrz app-container">
     </div>
   </AppContainer>
 </section></Router>);
-/*window.custom = () => {
- ReactDOM.render(<App />, document.getElementById('root'));
-}*/
-
 
 injectTapEventPlugin();
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// registerServiceWorker();
