@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Usage.css';
-import { PrintCode, FooterBanner } from '../../../components';
+import { PrintCode } from '../../../components';
 const Usage = () => {
   const codeApp = `import React from 'react';
 import ReactDOM from 'react-dom';
@@ -28,7 +28,6 @@ export default MyAwesomeReactComponent;`;
 const complex = "import RaisedButton from 'material-ui/RaisedButton';";
 const simple = "import {RaisedButton} from 'material-ui';";
   return (<div>
-    <div className="markdown-body">
       <h2>用法</h2>
       <p>从v0.15.0开始，Material-UI组件需要提供一个主题。 启动和运行的最快方法是使用<span className="code">MuiThemeProvider</span>将主题注入到应用程序上下文中。 之后，您可以使用文档中所示的任何组件。</p>
       <p>快速入门</p>
@@ -48,9 +47,7 @@ const simple = "import {RaisedButton} from 'material-ui';";
       <li><a href="#/customization/themes">使用主题</a>，您可以使用自定义主题来构建组件。</li>
       <li><a href="#/customization/styles">使用内联样式</a>，您可以通过style属性覆盖单个组件样式。</li>
       </ul>
-     </div>
-    <FooterBanner />
-  </div>);
+     </div>);
 };
 
 export default Usage;

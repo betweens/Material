@@ -1,5 +1,5 @@
 import React from 'react';
-import { PrintCode, FooterBanner } from '../../../components';
+import { PrintCode } from '../../../components';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Slider from 'material-ui/Slider';
 import FlatButton from 'material-ui/FlatButton';
@@ -119,7 +119,6 @@ export default {
   },
 };`;
   return (<div className="themes">
-    <div className="markdown-body">
       <h2>主题</h2>
       <h3>例如:</h3>
       <div className="border-code">
@@ -203,9 +202,7 @@ export default {
       <p>该组件将主题作为属性，并将其传递给上下文。 这最好应该在你的组件树的根目录下。 第一个例子演示了它的用法。</p>
       <p><span className="code">muiThemeable()</span></p>
       <p>这个更高阶的组件包装另一个组件以提供一个muiTheme属性。 传入您的组件，它将返回包装的组件。</p>
-     </div>
-    <FooterBanner />
-  </div>);
+     </div>);
 };
 
 export default Themes;

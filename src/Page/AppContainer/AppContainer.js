@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+// import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import Drawer from 'material-ui/Drawer';
 import {List, ListItem} from 'material-ui/List';
 import AppBar from 'material-ui/AppBar';
 import DropDownMenu from 'material-ui/DropDownMenu';
+import FlatButton from 'material-ui/FlatButton';
+import { FooterBanner } from '../../components';
 import Version from './Version';
 import OutMenu from './OutMenu.js';
-import './LeftMenu.css';
-class LeftMenu extends Component {
+import './AppContainer.css';
+class AppContainer extends Component {
 	constructor(props) {
     super(props);
     this.state = {
@@ -15,17 +21,15 @@ class LeftMenu extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.listenInWindowSize = this.listenInWindowSize.bind(this);
+    this.handleTouchTap = this.handleTouchTap.bind(this);
   }
   // 选择版本
   handleChange(event, index, value) {
     this.setState({ value });
   }
   componentWillMount() {
-    window.onresize = this.listenInWindowSize;
-  }
-
-  componentDidMount() {
     this.listenInWindowSize();
+    window.onresize = this.listenInWindowSize;
   }
 
   listenInWindowSize () {
@@ -42,13 +46,20 @@ class LeftMenu extends Component {
       })
     }
   }
+  // 切换左侧菜单
+  handleTouchTap() {
+    this.setState({
+      open: !this.state.open,
+      docked: true,
+    })
+  }
   
   render() {
     // 左侧导航栏配置
     const drawerConfig = {
 		  open: this.state.open,
+      docked: this.state.docked,
 		  disableSwipeToOpen: true,
-      className: this.state.open ? 'flex-init left-menu' : 'flex-init',
 		}
 		// 版本选择框宽度
 		const styles = {
@@ -63,7 +74,16 @@ class LeftMenu extends Component {
 		  style: styles.customWidth,
 		  autoWidth: false,
 		}
-    return (<Drawer {...drawerConfig}>
+    // 控制展示侧边栏是容器边距
+    const  noBodyPadong = {
+      margin: this.state.open ? '48px 72px' : '10px',
+      paddingLeft: this.state.open ? '256px' : '0px',
+    }
+
+    return ( <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}><div className="left-menu">
+      <div className="top-bg">Aww yeah, Material-UI v1 is coming!</div>
+      <AppBar onLeftIconButtonTouchTap={this.handleTouchTap} iconElementRight={<FlatButton label="github" href="https://github.com/betweens/Material" />} />
+      <Drawer {...drawerConfig}>
       <div className="top-bg"></div>
     	<AppBar title="Material-UI" showMenuIconButton={false} style={{  marginTop: "40px" }}/>
     	<div style={{paddingLeft: "16px" , fontSize: "16px", marginTop: "8px" }}>Version:</div>
@@ -75,8 +95,11 @@ class LeftMenu extends Component {
     	  <ListItem key={2} primaryText="React" />
     	  <ListItem key={3} primaryText="Material Design" />
     	</List>
-    </Drawer>);
+    </Drawer>
+   <div className="markdown-body" style={noBodyPadong}>{this.props.children}</div>
+   <FooterBanner />
+  </div></MuiThemeProvider>);
   }
 }
 
-export default LeftMenu;
+export default AppContainer;

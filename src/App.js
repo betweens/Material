@@ -6,14 +6,9 @@ import {
   HashRouter as Router,
   Route,
 } from 'react-router-dom'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
-// import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import AppBar from 'material-ui/AppBar';
-import FlatButton from 'material-ui/FlatButton';
+
 // 左侧菜单
-import LeftMenu from './Page/LeftMenu';
+import AppContainer from './Page/AppContainer';
 // 开始使用
 import RequiredKnowledge from './Page/GetStarted/RequiredKnowledge';
 import Installation from './Page/GetStarted/Installation';
@@ -33,38 +28,28 @@ import BottomNavigation from './Page/Components/BottomNavigation';
 import FlatButtonPage from './Page/Components/FlatButton';
 import RaisedButton from './Page/Components/RaisedButton';
 import FloatingActionButton from './Page/Components/FloatingActionButton';
-let appTheme = lightBaseTheme;
-// 主容器
-const AppContainer = (props) => (
-  <MuiThemeProvider muiTheme={getMuiTheme(appTheme)}>{props.children}</MuiThemeProvider>
-);
 // 路由集合
-const App = () => (<Router><section className="flex-hrz app-container">
-  <div className="top-bg">Aww yeah, Material-UI v1 is coming!</div>
-  <MuiThemeProvider muiTheme={getMuiTheme(appTheme)}><LeftMenu /></MuiThemeProvider>
+const App = () => (<Router>
   <AppContainer>
-    <div className="flex-full">
-      <AppBar showMenuIconButton={false} iconElementRight={<FlatButton label="github" href="https://github.com/betweens/Material" />} />
-      <Route exact path="/" component={AppBarPage}/>
-      <Route exact path="/app-bar" component={AppBarPage}/>
-      <Route exact path="/required-knowledge" component={RequiredKnowledge}/>
-      <Route exact path="/installation" component={Installation}/>
-      <Route exact path="/usage" component={Usage}/>
-      <Route exact path="/examples" component={Examples}/>
-      <Route exact path="/server-rendering" component={ServerRendering}/>
-      <Route exact path="/themes" component={Themes}/>
-      <Route exact path="/styles" component={Styles}/>
-      <Route exact path="/colors" component={Colors}/>
-      <Route exact path="/auto-complete" component={AutoComplete}/>
-      <Route exact path="/avatar" component={Avatar}/>
-      <Route exact path="/badge" component={Badge}/>
-      <Route exact path="/bottom-navigation" component={BottomNavigation}/>
-      <Route exact path="/flat-button" component={FlatButtonPage}/>
-      <Route exact path="/raised-button" component={RaisedButton}/> 
-      <Route exact path="/floating-action-button" component={FloatingActionButton}/>
-    </div>
+    <Route exact path="/" component={AppBarPage}/>
+    <Route exact path="/app-bar" component={AppBarPage}/>
+    <Route exact path="/required-knowledge" component={RequiredKnowledge}/>
+    <Route exact path="/installation" component={Installation}/>
+    <Route exact path="/usage" component={Usage}/>
+    <Route exact path="/examples" component={Examples}/>
+    <Route exact path="/server-rendering" component={ServerRendering}/>
+    <Route exact path="/themes" component={Themes}/>
+    <Route exact path="/styles" component={Styles}/>
+    <Route exact path="/colors" component={Colors}/>
+    <Route exact path="/auto-complete" component={AutoComplete}/>
+    <Route exact path="/avatar" component={Avatar}/>
+    <Route exact path="/badge" component={Badge}/>
+    <Route exact path="/bottom-navigation" component={BottomNavigation}/>
+    <Route exact path="/flat-button" component={FlatButtonPage}/>
+    <Route exact path="/raised-button" component={RaisedButton}/> 
+    <Route exact path="/floating-action-button" component={FloatingActionButton}/>
   </AppContainer>
-</section></Router>);
+</Router>);
 
 injectTapEventPlugin();
 ReactDOM.render(<App />, document.getElementById('root'));

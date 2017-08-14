@@ -1,6 +1,6 @@
 import React from 'react';
 // import './ServerRendering.css';
-import { PrintCode, FooterBanner } from '../../../components';
+import { PrintCode } from '../../../components';
 const ServerRendering = () => {
   const muiTheme = `import React from 'react';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -29,7 +29,6 @@ const Main = () => (
 export default Main;`;
  
   return (<div>
-    <div className="markdown-body">
       <h2>服务端渲染</h2>
       <p>当使用Material-UI与服务器呈现时，我们必须为服务器和客户端使用相同的环境。 这有两个技术含义。</p>
       <h3>Autoprefixer</h3>
@@ -45,9 +44,7 @@ export default Main;`;
       <h3>process.env.NODE_ENV</h3>
       <p>您还需要在客户端和服务器端之间使用相同的<span className="code">process.env.NODE_ENV</span> 否则，校验和将不匹配。</p>
       <p>我们在开发环境中运行一些风格完整性检查。 所以在生产过程中，确保将<span className="code">process.env.NODE_ENV</span>设置为<span className="code">“production”</span>，以加快样式计算。</p>
-     </div>
-    <FooterBanner />
-  </div>);
+     </div>);
 };
 
 export default ServerRendering;

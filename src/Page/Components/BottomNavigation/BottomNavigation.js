@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { 
 	PrintCode, 
-	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
 } from '../../../components'
@@ -27,7 +26,6 @@ class BottomNavigationPage extends Component {
     const favoritesIcon = <FontIcon className="material-icons">favorite</FontIcon>;
     const nearbyIcon = <IconLocationOn />;
     return (<div>
-	    <div className="markdown-body">
 	      <h2>底部导航</h2>
 	      <p><a href="https://www.google.com/design/spec/components/bottom-navigation.html#bottom-navigation-behavior">底部导航</a>是用于导航的特殊工具栏。</p>
 	      <h3>Examples</h3>
@@ -62,9 +60,7 @@ class BottomNavigationPage extends Component {
         <h3>BottomNavigationItem 属性</h3>
         <PropertiesList items={propertiesData2} />
         <p style={{marginTop: '20px'}}>其他属性（未记录）应用于根元素。</p>
-	     </div>
-	    <FooterBanner />
-  </div>);
+	     </div>);
   }
 }
 

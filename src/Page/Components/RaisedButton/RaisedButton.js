@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { 
 	PrintCode, 
-	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
 } from '../../../components'
@@ -41,7 +40,6 @@ class RaisedButtonPage extends Component {
     };
 
     return (<div>
-	    <div className="markdown-body">
 	      <h2>Raised Button</h2>
 	      <p>此<a href="https://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons">按钮</a>用于将维度添加到大多数平面布局，并强调页面上的重要功能。</p>
 	      <h3>Examples</h3>
@@ -111,9 +109,7 @@ class RaisedButtonPage extends Component {
         </ContainerPreCode>
 	      <h3>属性</h3>
 	      <PropertiesList items={propertiesData} />
-	     </div>
-	    <FooterBanner />            
-  </div>);
+	     </div>);
   }
 }
 

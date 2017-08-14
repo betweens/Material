@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Installation.css';
-import { PrintCode, FooterBanner } from '../../../components';
+import { PrintCode } from '../../../components';
 const Installation = () => {
   const code = `import injectTapEventPlugin from 'react-tap-event-plugin';\n
 
@@ -8,7 +8,6 @@ const Installation = () => {
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();`;
   return (<div>
-    <div className="markdown-body">
       <h2>安装</h2>
       <p>Material-UI可作为 <a href="https://www.npmjs.org/package/material-ui">npm软件包</a>使用。</p>
       <h3 id="react-tap-event-plugin">react-tap-event-plugin</h3>
@@ -19,9 +18,7 @@ injectTapEventPlugin();`;
       <p>Material-UI设计了<a href="http://www.google.com/fonts/specimen/Roboto">Roboto</a>字体。 所以一定要把它包含在你的项目中。 以下是有关如何做的说明。</p>
       <h3 id="es-compiling">ES Compiling</h3>
       <p>本文档中的示例使用ECMAScript规范的<code>stage-1</code>段功能。 确保在您自己的项目中测试这些示例，您的编译器中安装了正确的插件。 以下是<a href="http://babeljs.io/docs/plugins/preset-stage-1/">有关如何安装Babel插件</a>的说明。</p>
-    </div>
-    <FooterBanner />
-  </div>);
+    </div>);
 };
 
 export default Installation;

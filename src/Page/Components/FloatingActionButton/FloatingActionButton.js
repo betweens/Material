@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { 
 	PrintCode, 
-	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
 } from '../../../components';
@@ -21,7 +20,6 @@ class FloatingActionButtonPage extends Component {
     };
 
     return (<div>
-	    <div className="markdown-body">
 	      <h2>Floating Action Button</h2>
 	      <p><a href="https://www.google.com/design/spec/components/buttons-floating-action-button.html">Floating Action Button</a>用于常用功能。</p>
 	      <h3>Examples</h3>
@@ -51,9 +49,7 @@ class FloatingActionButtonPage extends Component {
 	      </ContainerPreCode>
 	      <h3>属性</h3>
 	      <PropertiesList items={propertiesData} />
-	     </div>
-	    <FooterBanner />
-  </div>);
+	     </div>);
   }
 }
 

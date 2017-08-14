@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { 
 	PrintCode, 
-	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
 } from '../../../components'
@@ -26,7 +25,6 @@ class AvatarPage extends Component {
   render() {
     const style = {margin: 5};	
     return (<div>
-	    <div className="markdown-body">
 	      <h2>Avatar</h2>
 	      <p>Avatar 可用于表示人物或物体。</p>
 	      <h3>Examples</h3>
@@ -125,9 +123,7 @@ class AvatarPage extends Component {
 	      </ContainerPreCode>
 	      <h3>属性</h3>
 	      <PropertiesList items={propertiesData} />
-	     </div>
-	    <FooterBanner />
-  </div>);
+	     </div>);
   }
 }
 

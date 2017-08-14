@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { 
 	PrintCode, 
-	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
 } from '../../../components'
@@ -114,7 +113,6 @@ class AutoCompletePage extends Component {
 		  disableAutoFocus: true,
 		};
     return (<div>
-	    <div className="markdown-body">
 	      <h2>自动补全</h2>
 	      <p><a href="https://www.google.com/design/spec/components/text-fields.html#text-fields-auto-complete-text-field">自动补全</a>是常规文本字段的扩展，可以动态自动完成输入。 它可以采用不同的自动补全过滤器，并使用菜单来显示建议。</p>
 	      <h3>例子</h3>
@@ -207,9 +205,7 @@ class AutoCompletePage extends Component {
 	      <PropertiesList items={propertiesData} />
 	      <p>其他属性（未记录）应用于根元素。</p>
 	      <p><small>* required property</small></p>
-	    </div>
-      <FooterBanner />
-  </div>);
+	    </div>);
   }
 }
 

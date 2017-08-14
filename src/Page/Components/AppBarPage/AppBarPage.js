@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { 
 	PrintCode, 
-	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
 } from '../../../components'
@@ -65,7 +64,6 @@ class AppBarPage extends Component {
 		};
 
     return (<div>
-	    <div className="markdown-body">
 	      <h2>导航条</h2>
 	      <p><a href="https://www.google.com/design/spec/layout/structure.html#structure-app-bar">app bar</a>, 以前被称为Android操作栏,是一种特殊的工具栏，用于品牌、导航、搜索和操作。</p>
 	      <ContainerPreCode>
@@ -109,8 +107,6 @@ class AppBarPage extends Component {
 	      </ContainerPreCode>
 	      <h3>属性</h3>
 	      <PropertiesList items={propertiesData} />
-	     </div>
-	    <FooterBanner />
   </div>);
   }
 }

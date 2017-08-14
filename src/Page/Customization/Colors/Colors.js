@@ -1,6 +1,5 @@
 import React from 'react';
 import './Colors.css';
-import { FooterBanner } from '../../../components';
 import { colors } from 'material-ui/styles';
 const Styles = () => {
   const li = [];
@@ -10,13 +9,10 @@ const Styles = () => {
     li.push(<li key={i++} style={{'backgroundColor': colors[value]}}>{colors[value]}</li>);
   }
   return (<div>
-    <div className="markdown-body colors">
       <h2>UI调色板</h2>
       <p>我们为UI调色板中使用的<a href="https://www.google.com/design/spec/style/color.html#color-ui-color-palette">每种颜色</a>创建了JavaScript变量。 它们在<a href="https://github.com/callemall/material-ui/blob/master/src/styles/colors.js">styles/colors.js</a>中。</p>
       <ol>{li}</ol>
-     </div>
-    <FooterBanner />
-  </div>);
+     </div>);
 };
 
 export default Styles;

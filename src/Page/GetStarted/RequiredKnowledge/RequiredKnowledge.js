@@ -1,7 +1,7 @@
 import React from 'react';
 import './RequiredKnowledge.css';
 
-const RequiredKnowledge = () => (<div className="markdown-body">
+const RequiredKnowledge = () => (<div>
   <h2>所需知识</h2>
   <p>我们建议您在进入Material-UI之前了解<a href="http://facebook.github.io/react/">React</a>。 Material-UI是一组React组件，因此了解React如何适应Web开发很重要。</p>
   <p>如果您已经熟悉单页面应用程序（SPA）和 Node，请随时跳过本节并直接转到安装部分。</p>

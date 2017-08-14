@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { 
 	PrintCode, 
-	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
 } from '../../../components'
@@ -40,7 +39,6 @@ class FlatButtonPage extends Component {
     }
 	
     return (<div>
-	    <div className="markdown-body">
 	      <h2>Flat Button</h2>
 	      <p><a href="https://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons">Flat Button</a>用于一般功能，并减少屏幕上的分层数量，使其更易于阅读。</p>
 	      <h3>Examples</h3>
@@ -109,9 +107,7 @@ class FlatButtonPage extends Component {
         </ContainerPreCode>
 	      <h3>属性</h3>
 	      <PropertiesList items={propertiesData} />
-	     </div>
-	    <FooterBanner />
-  </div>);
+	     </div>);
   }
 }
 

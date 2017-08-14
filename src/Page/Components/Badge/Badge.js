@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { 
 	PrintCode, 
-	FooterBanner, 
 	ContainerPreCode,
 	PropertiesList,
 } from '../../../components'
@@ -21,7 +20,6 @@ class BadgePage extends Component {
  
   render() {
     return (<div>
-	    <div className="markdown-body">
 	      <h2>徽章</h2>
 	      <p>这个组件在其子元素的右上角生成一个小徽章）。</p>
 	      <h3>Examples</h3>
@@ -67,9 +65,7 @@ class BadgePage extends Component {
 	      <h3>属性</h3>
 	      <PropertiesList items={propertiesData} />
 	      <p><small>* required property</small></p>
-	     </div>
-	    <FooterBanner />
-  </div>);
+	     </div>);
   }
 }
 
