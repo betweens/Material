@@ -1,6 +1,7 @@
 ### Material UI 中文网站
 
 [Material UI 中文网](http://www.no-forget.com/material/)
+翻译还未全部完成*** 加紧翻译中
 ## 文件夹结构
 
 ```
