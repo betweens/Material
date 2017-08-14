@@ -18,6 +18,7 @@ class AppContainer extends Component {
     this.state = {
       value: 1,
       open: true,
+      size: 0,
     };
     this.handleChange = this.handleChange.bind(this);
     this.listenInWindowSize = this.listenInWindowSize.bind(this);
@@ -38,11 +39,13 @@ class AppContainer extends Component {
       if (this.state.open === false) return;
       this.setState({
         open: false,
+        size,
       })
     } else {
       if (this.state.open) return;
       this.setState({
         open: true,
+        size,
       })
     }
   }
@@ -58,8 +61,9 @@ class AppContainer extends Component {
     // 左侧导航栏配置
     const drawerConfig = {
 		  open: this.state.open,
-      docked: this.state.docked,
+      docked: false,
 		  disableSwipeToOpen: true,
+      onRequestChange: (open) => this.setState({open}),
 		}
 		// 版本选择框宽度
 		const styles = {
@@ -74,10 +78,15 @@ class AppContainer extends Component {
 		  style: styles.customWidth,
 		  autoWidth: false,
 		}
+
     // 控制展示侧边栏是容器边距
-    const  noBodyPadong = {
-      margin: this.state.open ? '48px 72px' : '10px',
-      paddingLeft: this.state.open ? '256px' : '0px',
+    const noBodyPadding = {
+      margin: this.state.open ? '48px 72px' : '20px',
+      paddingLeft: this.state.open ? '256px' : '0',
+    }
+
+    if (this.state.open && this.state.size < 996) {
+      noBodyPadding.paddingLeft = '0';
     }
 
     return ( <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}><div className="left-menu">
@@ -96,7 +105,7 @@ class AppContainer extends Component {
     	  <ListItem key={3} primaryText="Material Design" />
     	</List>
     </Drawer>
-   <div className="markdown-body" style={noBodyPadong}>{this.props.children}</div>
+   <div className="markdown-body" style={noBodyPadding}>{this.props.children}</div>
    <FooterBanner />
   </div></MuiThemeProvider>);
   }

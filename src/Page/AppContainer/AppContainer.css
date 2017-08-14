@@ -151,10 +151,6 @@ table {
   z-index: 1101;
 }
 
-.app-container {
-	padding-top: 40px;
-}
-
 .a-block {
   a {
     display: block;
