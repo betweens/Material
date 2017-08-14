@@ -61,7 +61,6 @@ class AppContainer extends Component {
     // 左侧导航栏配置
     const drawerConfig = {
 		  open: this.state.open,
-      docked: false,
 		  disableSwipeToOpen: true,
       onRequestChange: (open) => this.setState({open}),
 		}
@@ -85,8 +84,8 @@ class AppContainer extends Component {
       paddingLeft: this.state.open ? '256px' : '0',
     }
 
-    if (this.state.open && this.state.size < 996) {
-      noBodyPadding.paddingLeft = '0';
+    if (this.state.size < 996 && this.state.size > 0) {
+      drawerConfig.docked = false;
     }
 
     return ( <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}><div className="left-menu">
