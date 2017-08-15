@@ -1,12 +1,8 @@
 import React from 'react';
 // import './Installation.css';
 import { PrintCode } from '../../../components';
+import { code } from './examplesCode.js';
 const Installation = () => {
-  const code = `import injectTapEventPlugin from 'react-tap-event-plugin';\n
-
-// Needed for onTouchTap
-// http://stackoverflow.com/a/34015469/988941
-injectTapEventPlugin();`;
   return (<div>
       <h2>安装</h2>
       <p>Material-UI可作为 <a href="https://www.npmjs.org/package/material-ui">npm软件包</a>使用。</p>

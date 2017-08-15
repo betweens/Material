@@ -1,32 +1,14 @@
 import React from 'react';
 // import './Usage.css';
 import { PrintCode } from '../../../components';
+import {
+  codeApp,
+  MyAwesomeReactComponent,
+  complex,
+  simple,
+} from './examplesCode.js';
 const Styles = () => {
-  const codeApp = `import React from 'react';
-import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MyAwesomeReactComponent from './MyAwesomeReactComponent';
 
-const App = () => (
-  <MuiThemeProvider>
-    <MyAwesomeReactComponent />
-  </MuiThemeProvider>
-);
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);`;
-const MyAwesomeReactComponent = `import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-
-const MyAwesomeReactComponent = () => (
-  <RaisedButton label="Default" />
-);
-
-export default MyAwesomeReactComponent;`;
-const complex = "import RaisedButton from 'material-ui/RaisedButton';";
-const simple = "import {RaisedButton} from 'material-ui';";
   return (<div>
       <h2>用法</h2>
       <p>从v0.15.0开始，Material-UI组件需要提供一个主题。 启动和运行的最快方法是使用<span className="code">MuiThemeProvider</span>将主题注入到应用程序上下文中。 之后，您可以使用文档中所示的任何组件。</p>
