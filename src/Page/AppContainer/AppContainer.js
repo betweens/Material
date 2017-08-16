@@ -86,6 +86,7 @@ class AppContainer extends Component {
 
     if (this.state.size < 996 && this.state.size > 0) {
       drawerConfig.docked = false;
+      noBodyPadding.paddingLeft = '0';
     }
 
     return ( <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}><div className="left-menu">
