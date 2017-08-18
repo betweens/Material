@@ -1,7 +1,9 @@
 ### Material UI 中文网站
 
-[Material UI 中文网](http://www.no-forget.com/material/)
-翻译还未全部完成*** 加紧翻译中
+[Material UI 中文网](http://www.no-forget.com/material/) 翻译还未全部完成*** 加紧翻译中
+＊＊利用 create-react-app 手脚架创建开发框架  利用 react-router-dom v4 做路由跳转
+**如果你觉的此网站对你有帮助，请给一个星，给予最大的鼓励，谢谢
+**在使用中如发现问题和bug，或更好的建议 欢迎在gtihub提issue，
 ## 文件夹结构
 
 ```
@@ -36,6 +38,4 @@ npm i
 npm start
 ```
 
-**如果你觉的此网站对你有帮助，请给一个星，给予最大的鼓励，谢谢
 
-**在使用中如发现问题和bug，或更好的建议 欢迎在gtihub提issue，
