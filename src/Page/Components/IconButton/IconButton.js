@@ -56,7 +56,7 @@ class IconButtonPage extends Component {
         <ul>
           <li>1.对于图标字体样式表:将prop <span className="code">iconClassName</span>设置为您图标的类名。 某些图标字体支持连字，允许将图标指定为字符串。 请参阅本文以了解有关在项目中包含字体图标的更多信息。</li>
           <li>2.对于SVG图标：插入SVG组件作为图标按钮的子元素。</li>
-          <li>3.替代方案：您还可以插入<a hef="http://www.material-ui.com/#/components/font-icon">FontIcon</a>组件作为IconButton的子元素。 这与处理方法1中的iconClassName prop类似。</li>
+          <li>3.替代方案：您还可以插入<a href="http://www.material-ui.com/#/components/font-icon">FontIcon</a>组件作为IconButton的子元素。 这与处理方法1中的iconClassName prop类似。</li>
         </ul>
         <h3>Examples</h3>
 	      <ContainerPreCode title="Simple example">

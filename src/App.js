@@ -29,6 +29,7 @@ import FlatButtonPage from './Page/Components/FlatButton';
 import RaisedButton from './Page/Components/RaisedButton';
 import FloatingActionButton from './Page/Components/FloatingActionButton';
 import IconButton from './Page/Components/IconButton';
+import Card from './Page/Components/Card';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -50,6 +51,7 @@ const App = () => (<Router>
     <Route exact path="/raised-button" component={RaisedButton}/> 
     <Route exact path="/floating-action-button" component={FloatingActionButton}/>
     <Route exact path="/icon-button" component={IconButton}/>
+    <Route exact path="/card" component={Card}/>
   </AppContainer>
 </Router>);
 

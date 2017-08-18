@@ -70,7 +70,6 @@
   }
 
   table {
-    display: block;
     width: 100%;
     overflow: auto;
     word-break: normal;
@@ -91,6 +90,10 @@
       font-family: Roboto,sans-serif;
       font-size: 95%;
       min-width: 250px;
+    }
+
+    ~ p {
+      margin-top: 10px;
     }
   }
 
