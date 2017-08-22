@@ -338,6 +338,75 @@ const propertiesData = {
     'node',
     '',
     "覆盖“OK”按钮的默认文本。",
+  ], [
+    'onChange',
+    'function',
+    '',
+    <div>日期值更改时触发的回调函数。<br />
+      Signature:<br />
+      function(null: undefined, date: object) => void<br />
+      null: 由于没有与更改相关联的特定事件，因此第一个参数将始终为空。<br />
+      date: 新的日期。
+    </div>,
+  ], [
+    'onClick',
+    'function',
+    '',
+    <div>在Date Picker的TextField上发生触摸点击事件时触发的回调功能。<br />
+      Signature:<br />
+      function(event: object) => void<br />
+      event: TouchTap事件定位到TextField。
+    </div>,
+  ], [
+    'onDismiss',
+    'function',
+    '',
+    "取消“日期选取器”对话框时触发的回调函数。",
+  ], [
+    'onFocus',
+    'function',
+    '',
+    "回调函数被触发时的Date Picker TextField获得焦点。",
+  ], [
+    'onShow',
+    'function',
+    '',
+    "显示 Date Picker's对话框时触发的回调函数。",
+  ], [
+    'openToYearSelection',
+    'bool',
+    'false',
+    "如果为true，将datepicker设置为首先打开年份选择。",
+  ], [
+    'shouldDisableDate',
+    'function',
+    '',
+    <div>回调函数用于确定日历中是否应禁用一天的条目。<br />
+      Signature:<br />
+      function(day: object) => boolean<br />
+      day: 一天的日期对象.<br />
+      returns (boolean): 指示是否应禁用该日期.
+    </div>,
+  ], [
+    'style',
+    'object',
+    '{}',
+    "覆盖根元素的内联样式。",
+  ], [
+    'textFieldStyle',
+    'object',
+    '',
+    "覆盖DatePicker文本字段元素的内联样式。",
+  ], [
+    'utils',
+    'object',
+    '',
+    <p>此对象应包含构建日历系统所需的方法。用于构建自定义日历系统。 有关更多信息，请参阅<a href="https://github.com/callemall/material-ui/blob/master/src/DatePicker/dateUtils.js">源代码</a>和<a href="https://github.com/alitaheri/material-ui-persian-date-picker-utils">示例实现</a>。</p>,
+  ], [
+    'value',
+    'object',
+    '',
+    "以编程方式设置日期选择器的日期。",
   ]]
 };
 export {

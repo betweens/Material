@@ -5,7 +5,10 @@
   "homepage": "./",
   "dependencies": {
     "child-process-promise": "^2.2.1",
+    "intl": "^1.2.5",
+    "intl-locales-supported": "^1.0.0",
     "material-ui": "^0.18.5",
+    "material-ui-persian-date-picker-utils": "^0.1.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.1",

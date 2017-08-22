@@ -31,6 +31,7 @@ import FloatingActionButton from './Page/Components/FloatingActionButton';
 import IconButton from './Page/Components/IconButton';
 import Card from './Page/Components/Card';
 import Chip from './Page/Components/Chip';
+import DatePicker from './Page/Components/DatePicker';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -54,6 +55,7 @@ const App = () => (<Router>
     <Route exact path="/icon-button" component={IconButton}/>
     <Route exact path="/card" component={Card}/>
     <Route exact path="/chip" component={Chip}/>
+    <Route exact path="/date-picker" component={DatePicker}/>
   </AppContainer>
 </Router>);
 
