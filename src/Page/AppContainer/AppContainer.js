@@ -8,6 +8,7 @@ import {List, ListItem} from 'material-ui/List';
 import AppBar from 'material-ui/AppBar';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import FlatButton from 'material-ui/FlatButton';
+import FontIcon from 'material-ui/FontIcon';
 import { FooterBanner } from '../../components';
 import Version from './Version';
 import OutMenu from './OutMenu.js';
@@ -91,7 +92,7 @@ class AppContainer extends Component {
 
     return ( <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}><div className="left-menu">
       <div className="top-bg">Aww yeah, Material-UI v1 is coming!</div>
-      <AppBar onLeftIconButtonTouchTap={this.handleTouchTap} iconElementRight={<FlatButton label="github" href="https://github.com/betweens/Material" />} />
+      <AppBar onLeftIconButtonTouchTap={this.handleTouchTap} iconElementRight={<FlatButton icon={<FontIcon className="muidocs-icon-custom-github" />} target="_blank" href="https://github.com/betweens/Material" />} />
       <Drawer {...drawerConfig}>
       <div className="top-bg"></div>
     	<AppBar title="Material-UI" showMenuIconButton={false} style={{  marginTop: "40px" }}/>

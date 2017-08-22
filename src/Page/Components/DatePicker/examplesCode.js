@@ -334,11 +334,6 @@ const propertiesData = {
     '',
     "覆盖“OK”按钮的默认文本。",
   ], [
-    'okLabel',
-    'node',
-    '',
-    "覆盖“OK”按钮的默认文本。",
-  ], [
     'onChange',
     'function',
     '',
