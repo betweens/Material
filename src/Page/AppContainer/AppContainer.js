@@ -80,14 +80,17 @@ class AppContainer extends Component {
 		}
 
     // 控制展示侧边栏是容器边距
-    const noBodyPadding = {
+    let noBodyPadding = {
       margin: this.state.open ? '48px 72px' : '20px',
       paddingLeft: this.state.open ? '256px' : '0',
     }
 
     if (this.state.size < 996 && this.state.size > 0) {
       drawerConfig.docked = false;
-      noBodyPadding.paddingLeft = '0';
+      noBodyPadding = {
+        margin: '20px',
+        paddingLeft: '0',
+      }
     }
 
     return ( <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}><div className="left-menu">
