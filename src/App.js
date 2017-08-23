@@ -34,6 +34,7 @@ import Chip from './Page/Components/Chip';
 import DatePicker from './Page/Components/DatePicker';
 import Dialog from './Page/Components/Dialog';
 import Divider from './Page/Components/Divider';
+import Drawer from './Page/Components/Drawer';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -60,6 +61,7 @@ const App = () => (<Router>
     <Route exact path="/date-picker" component={DatePicker}/>
     <Route exact path="/dialog" component={Dialog}/>
     <Route exact path="/divider" component={Divider}/>
+    <Route exact path="/drawer" component={Drawer}/>
   </AppContainer>
 </Router>);
 

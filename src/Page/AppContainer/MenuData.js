@@ -132,8 +132,13 @@ const Menudata = [
             }, 
             {
                 "label": "Divider", 
-                "explain": "分隔", 
+                "explain": "Divider", 
                 "path": "divider"
+            },
+            {
+                "label": "Drawer", 
+                "explain": "Drawer", 
+                "path": "drawer"
             }, 
             {
                 "label": "Grid List", 
