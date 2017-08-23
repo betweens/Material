@@ -45,7 +45,7 @@ class DrawerPage extends Component {
  
     return (<div>
 	      <h2>Dialog</h2>
-	      <p><a href="">Drawer</a>从侧面滑入。 这是Google应用中常见的模式，并且遵循列表的键盘和指标。</p>
+	      <p><a href="https://www.google.com/design/spec/patterns/navigation-drawer.html">Drawer</a>从侧面滑入。 这是Google应用中常见的模式，并且遵循列表的键盘和指标。</p>
 	      <p>没有不受控制的模式的例子，因为不能控制的Drawer只能通过滑动来打开。 该文档站点具有不受控制的Drawer。 在触摸设备上从左侧滑动即可查看。</p>
 	      <h3>Examples</h3>
 	      <ContainerPreCode title="Docked Example">
