@@ -74,7 +74,7 @@ class CardPage extends Component {
 	        </div>
 	      </ContainerPreCode>
 	      <ContainerPreCode title="Expandable example">
-	        <PrintCode code={expandableExampleCode} />
+	        <PrintCode code={controlledExampleCode} />
           <div className="show-examples">
 					  <p>控扩展的<span className="code">Card</span>。 使用图标，切换或按钮来控制Card的扩展状态。</p>
 					   <Card expanded={this.state.expanded} onExpandChange={this.handleExpandChange}>

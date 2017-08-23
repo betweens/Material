@@ -28,9 +28,9 @@ function handleActive(tab) {
  //window.custom && window.custom();
  console.log(tab);
 }
-function handleChange(value) {
+/*function handleChange(value) {
   console.log(value);
-}
+}*/
 const Themes = () => {
   const btnStle = {
     marginTop: '10px',

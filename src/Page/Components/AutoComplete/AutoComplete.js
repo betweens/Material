@@ -9,6 +9,7 @@ import {
   dataSourcesCode,
   filterCode,
   controlledCode,
+  menuPropsCode,
   propertiesData,
 } from './examplesCode.js';
 import AutoComplete from 'material-ui/AutoComplete';
@@ -192,7 +193,7 @@ class AutoCompletePage extends Component {
 	        </div>
 	      </ContainerPreCode>
 	      <ContainerPreCode title="MenuProps example">
-	        <PrintCode code={controlledCode} />
+	        <PrintCode code={menuPropsCode} />
 	        <div className="show-examples">
 	          <p>提供工具进入菜单组件。</p>
 	          <AutoComplete

@@ -408,5 +408,6 @@ export {
   dataSourcesCode,
   filterCode,
   controlledCode,
+  menuPropsCode,
   propertiesData,
 }
