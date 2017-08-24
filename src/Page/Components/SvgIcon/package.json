@@ -1,0 +1,6 @@
+{
+  "name": "SvgIcon",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SvgIcon.js"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "FontIcon",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./FontIcon.js"
+}

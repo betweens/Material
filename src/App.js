@@ -36,6 +36,8 @@ import Dialog from './Page/Components/Dialog';
 import Divider from './Page/Components/Divider';
 import Drawer from './Page/Components/Drawer';
 import GridList from './Page/Components/GridList';
+import FontIcon from './Page/Components/FontIcon';
+import SvgIcon from './Page/Components/SvgIcon';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -64,6 +66,8 @@ const App = () => (<Router>
     <Route exact path="/divider" component={Divider}/>
     <Route exact path="/drawer" component={Drawer}/>  
     <Route exact path="/grid-list" component={GridList}/>
+    <Route exact path="/font-icon" component={FontIcon}/>
+    <Route exact path="/svg-icon" component={SvgIcon}/>
   </AppContainer>
 </Router>);
 
