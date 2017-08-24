@@ -38,6 +38,7 @@ import Drawer from './Page/Components/Drawer';
 import GridList from './Page/Components/GridList';
 import FontIcon from './Page/Components/FontIcon';
 import SvgIcon from './Page/Components/SvgIcon';
+import List from './Page/Components/List';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -68,6 +69,7 @@ const App = () => (<Router>
     <Route exact path="/grid-list" component={GridList}/>
     <Route exact path="/font-icon" component={FontIcon}/>
     <Route exact path="/svg-icon" component={SvgIcon}/>
+    <Route exact path="/list" component={List}/>
   </AppContainer>
 </Router>);
 

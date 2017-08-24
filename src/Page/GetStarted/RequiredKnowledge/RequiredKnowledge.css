@@ -18,6 +18,17 @@
     border-radius: 3px;
   }
 
+  .mobile-tear-sheet {
+    margin-bottom: 24px;
+    margin-right: 24px;
+    max-width: 360px;
+    width: 100%;
+    border: 1px solid rgb(217, 217, 217);
+    border-image: initial;
+    height: 500px;
+    overflow: hidden;
+  }
+
   h2 {
   	padding-bottom: .3em;
     font-size: 1.5em;
