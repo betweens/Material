@@ -645,7 +645,21 @@ const ListExampleSelectable = () => (
 );
 
 export default ListExampleSelectable;`;
-const propertiesData = {
+const propertiesData1 = {
+  title: ['Name', 'Type', 'Default', 'Description'],
+  body:[[
+    'children',
+    'node',
+    '',
+    '这些通常是ListItems，它们被传递到列表的一部分。',
+  ], [
+    'style',
+    'object',
+    '',
+    '覆盖根元素的内联样式。',
+  ]]
+};
+const propertiesData2 = {
   title: ['Name', 'Type', 'Default', 'Description'],
   body:[[
     'autoGenerateNestedIndicator',
@@ -817,5 +831,6 @@ export {
   phoneListCode,
   messagesListCode,
   selectableListCode,
-  propertiesData,
+  propertiesData1,
+  propertiesData2,
 }

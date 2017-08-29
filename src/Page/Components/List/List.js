@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { 
 	PrintCode, 
 	ContainerPreCode,
@@ -14,10 +15,11 @@ import {
   phoneListCode,
   messagesListCode,
   selectableListCode,
-  propertiesData,
+  propertiesData1,
+  propertiesData2,
 } from './examplesCode.js';
 // import MobileTearSheet from '../../../MobileTearSheet';
-import {List, ListItem} from 'material-ui/List';
+import {List, ListItem, makeSelectable} from 'material-ui/List';
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 import ContentSend from 'material-ui/svg-icons/content/send';
@@ -27,7 +29,7 @@ import ActionInfo from 'material-ui/svg-icons/action/info';
 import Avatar from 'material-ui/Avatar';
 import Subheader from 'material-ui/Subheader';
 import CommunicationChatBubble from 'material-ui/svg-icons/communication/chat-bubble';
-import {pinkA200, transparent, yellow600, blue500, indigo500} from 'material-ui/styles/colors';
+import {pinkA200, transparent, yellow600, blue500, indigo500, grey400, darkBlack, lightBlack} from 'material-ui/styles/colors';
 import FileFolder from 'material-ui/svg-icons/file/folder';
 import ActionAssignment from 'material-ui/svg-icons/action/assignment';
 import EditorInsertChart from 'material-ui/svg-icons/editor/insert-chart';
@@ -35,7 +37,48 @@ import Toggle from 'material-ui/Toggle';
 import Checkbox from 'material-ui/Checkbox';
 import CommunicationCall from 'material-ui/svg-icons/communication/call';
 import CommunicationEmail from 'material-ui/svg-icons/communication/email';
+import IconMenu from 'material-ui/IconMenu';
+import MenuItem from 'material-ui/MenuItem';
+import IconButton from 'material-ui/IconButton';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 // import './List.css';
+let SelectableList = makeSelectable(List);
+
+function wrapState(ComposedComponent) {
+  return class SelectableList extends Component {
+    static propTypes = {
+      children: PropTypes.node.isRequired,
+      defaultValue: PropTypes.number.isRequired,
+    };
+
+    componentWillMount() {
+      this.setState({
+        selectedIndex: this.props.defaultValue,
+      });
+    }
+
+    handleRequestChange = (event, index) => {
+      this.setState({
+        selectedIndex: index,
+      });
+    };
+
+    render() {
+      return (
+        <ComposedComponent
+          value={this.state.selectedIndex}
+          onChange={this.handleRequestChange}
+        >
+          {this.props.children}
+        </ComposedComponent>
+      );
+    }
+  };
+}
+
+SelectableList = wrapState(SelectableList);
+
+
 class ListPage extends Component {
 	constructor(props) {
 	 	super(props);
@@ -409,11 +452,185 @@ class ListPage extends Component {
           <div className="show-examples">
             <p>显示格式化二级文本的两个示例 第二个例子演示了一个带有<span className="code">tooltip</span>的<a href="http://www.material-ui.com/#/components/icon-button">IconButton</a>。</p>
 	          <div className="mobile-tear-sheet">
+	           <List>
+				        <Subheader>Today</Subheader>
+				        <ListItem
+				          leftAvatar={<Avatar src="http://www.material-ui.com/images/ok-128.jpg" />}
+				          primaryText="Brunch this weekend?"
+				          secondaryText={
+				            <p>
+				              <span style={{color: darkBlack}}>Brendan Lim</span> --
+				              I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+				            </p>
+				          }
+				          secondaryTextLines={2}
+				        />
+				        <Divider inset={true} />
+				        <ListItem
+				          leftAvatar={<Avatar src="http://www.material-ui.com/images/kolage-128.jpg" />}
+				          primaryText={
+				            <p>Summer BBQ&nbsp;&nbsp;<span style={{color: lightBlack}}>4</span></p>
+				          }
+				          secondaryText={
+				            <p>
+				              <span style={{color: darkBlack}}>to me, Scott, Jennifer</span> --
+				              Wish I could come, but I&apos;m out of town this weekend.
+				            </p>
+				          }
+				          secondaryTextLines={2}
+				        />
+				        <Divider inset={true} />
+				        <ListItem
+				          leftAvatar={<Avatar src="http://www.material-ui.com/images/uxceo-128.jpg" />}
+				          primaryText="Oui oui"
+				          secondaryText={
+				            <p>
+				              <span style={{color: darkBlack}}>Grace Ng</span> --
+				              Do you have Paris recommendations? Have you ever been?
+				            </p>
+				          }
+				          secondaryTextLines={2}
+				        />
+				        <Divider inset={true} />
+				        <ListItem
+				          leftAvatar={<Avatar src="http://www.material-ui.com/images/kerem-128.jpg" />}
+				          primaryText="Birdthday gift"
+				          secondaryText={
+				            <p>
+				              <span style={{color: darkBlack}}>Kerem Suer</span> --
+				              Do you have any ideas what we can get Heidi for her birthday? How about a pony?
+				            </p>
+				          }
+				          secondaryTextLines={2}
+				        />
+				        <Divider inset={true} />
+				        <ListItem
+				          leftAvatar={<Avatar src="http://www.material-ui.com/images/raquelromanp-128.jpg" />}
+				          primaryText="Recipe to try"
+				          secondaryText={
+				            <p>
+				              <span style={{color: darkBlack}}>Raquel Parrado</span> --
+				              We should eat this: grated squash. Corn and tomatillo tacos.
+				            </p>
+				          }
+				          secondaryTextLines={2}
+				        />
+				      </List>
+	          </div>
+	          <div className="mobile-tear-sheet">
+	          <List>
+			        <Subheader>Today</Subheader>
+			        <ListItem
+			          leftAvatar={<Avatar src="http://www.material-ui.com/images/ok-128.jpg" />}
+			          rightIconButton={rightIconMenu}
+			          primaryText="Brendan Lim"
+			          secondaryText={
+			            <p>
+			              <span style={{color: darkBlack}}>Brunch this weekend?</span><br />
+			              I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+			            </p>
+			          }
+			          secondaryTextLines={2}
+			        />
+			        <Divider inset={true} />
+			        <ListItem
+			          leftAvatar={<Avatar src="http://www.material-ui.com/images/kolage-128.jpg" />}
+			          rightIconButton={rightIconMenu}
+			          primaryText="me, Scott, Jennifer"
+			          secondaryText={
+			            <p>
+			              <span style={{color: darkBlack}}>Summer BBQ</span><br />
+			              Wish I could come, but I&apos;m out of town this weekend.
+			            </p>
+			          }
+			          secondaryTextLines={2}
+			        />
+			        <Divider inset={true} />
+			        <ListItem
+			          leftAvatar={<Avatar src="http://www.material-ui.com/images/uxceo-128.jpg" />}
+			          rightIconButton={rightIconMenu}
+			          primaryText="Grace Ng"
+			          secondaryText={
+			            <p>
+			              <span style={{color: darkBlack}}>Oui oui</span><br />
+			              Do you have any Paris recs? Have you ever been?
+			            </p>
+			          }
+			          secondaryTextLines={2}
+			        />
+			        <Divider inset={true} />
+			        <ListItem
+			          leftAvatar={<Avatar src="http://www.material-ui.com/images/kerem-128.jpg" />}
+			          rightIconButton={rightIconMenu}
+			          primaryText="Kerem Suer"
+			          secondaryText={
+			            <p>
+			              <span style={{color: darkBlack}}>Birthday gift</span><br />
+			              Do you have any ideas what we can get Heidi for her birthday? How about a pony?
+			            </p>
+			          }
+			          secondaryTextLines={2}
+			        />
+			        <Divider inset={true} />
+			        <ListItem
+			          leftAvatar={<Avatar src="http://www.material-ui.com/images/raquelromanp-128.jpg" />}
+			          rightIconButton={rightIconMenu}
+			          primaryText="Raquel Parrado"
+			          secondaryText={
+			            <p>
+			              <span style={{color: darkBlack}}>Recipe to try</span><br />
+			              We should eat this: grated squash. Corn and tomatillo tacos.
+			            </p>
+			          }
+			          secondaryTextLines={2}
+			        />
+			      </List>
 	          </div>
 	        </div>
 	      </ContainerPreCode>
-	      <h3>属性</h3>
-	      <PropertiesList items={propertiesData} />
+	      <ContainerPreCode title="Selectable List">
+	        <PrintCode code={selectableListCode} />
+          <div className="show-examples">
+            <p>可选列表包装在一级组件中的列表。</p>
+            <div className="mobile-tear-sheet">
+              <SelectableList defaultValue={3}>
+					      <Subheader>Selectable Contacts</Subheader>
+					      <ListItem
+					        value={1}
+					        primaryText="Brendan Lim"
+					        leftAvatar={<Avatar src="http://www.material-ui.com/images/ok-128.jpg" />}
+					        nestedItems={[
+					          <ListItem
+					            value={2}
+					            primaryText="Grace Ng"
+					            leftAvatar={<Avatar src="http://www.material-ui.com/images/uxceo-128.jpg" />}
+					          />,
+					        ]}
+					      />
+					      <ListItem
+					        value={3}
+					        primaryText="Kerem Suer"
+					        leftAvatar={<Avatar src="http://www.material-ui.com/images/kerem-128.jpg" />}
+					      />
+					      <ListItem
+					        value={4}
+					        primaryText="Eric Hoffman"
+					        leftAvatar={<Avatar src="http://www.material-ui.com/images/kolage-128.jpg" />}
+					      />
+					      <ListItem
+					        value={5}
+					        primaryText="Raquel Parrado"
+					        leftAvatar={<Avatar src="http://www.material-ui.com/images/raquelromanp-128.jpg" />}
+					      />
+					    </SelectableList>
+            </div>
+          </div>
+         </ContainerPreCode>
+         <h3>List Properties</h3>
+	      <PropertiesList items={propertiesData1} />
+	      <p>Other properties (not documented) are applied to the root element.</p>
+	      <h3>ListItem Properties</h3>
+	      <PropertiesList items={propertiesData2} />
 	      <p>Other properties (not documented) are applied to the root element.</p>
 	     </div>);
   }
