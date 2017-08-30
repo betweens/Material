@@ -314,7 +314,7 @@ const propertiesData1 = {
     'onMenuItemFocusChange',
     'function',
     '() => {}',
-    <div>当对MenuItem的焦点改变时，回调函数被触发。 如果两个不同的聚焦事件发生，将会出现一些“重复”更改，例如，如果MenuItem通过键盘聚焦，然后点击它。
+    <div>当对MenuItem的焦点改变时，回调函数被触发。 如果两个不同的聚焦事件发生，将会出现一些“重复”更改，例如，如果MenuItem通过键盘聚焦，然后点击它。<br />
       Signature:<br />
       function(event: object, newFocusIndex: number) => void<br />
       event:  引发焦点变化的事件。 事件可以为null，因为焦点可以因非事件原因（例如prop更改）而改变。<br />

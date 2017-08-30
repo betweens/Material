@@ -331,7 +331,7 @@ const propertiesData = {
     ' () => {}',
     <div>当通过触摸点击选择菜单项时，回调功能被触发。<br />
 
-      Signature:
+      Signature:<br />
       <span className="code">function(event: object, child: object) => void</span><br />
       event: TouchTap event targeting the selected menu item element.
       child: The selected element.
@@ -353,9 +353,9 @@ const propertiesData = {
     ' () => {}',
     <div>要求更改菜单的打开状态时触发回调功能。<br />
 
-      Signature:
+      Signature:<br />
       <span className="code">function(open: boolean, reason: string) => void</span><br />
-      open: If true, the menu was requested to be opened.
+      open: If true, the menu was requested to be opened.<br />
       reason: 开放或关闭请求的原因。 可能的值是打开请求的“键盘”和“iconTap” 'enter'，'escape'，'itemTap'和'clickAway'用于关闭请求。
     </div>,
   ], [
