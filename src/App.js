@@ -40,6 +40,7 @@ import FontIcon from './Page/Components/FontIcon';
 import SvgIcon from './Page/Components/SvgIcon';
 import List from './Page/Components/List';
 import Paper from './Page/Components/Paper';
+import Menu from './Page/Components/Menu';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -72,6 +73,7 @@ const App = () => (<Router>
     <Route exact path="/svg-icon" component={SvgIcon}/>
     <Route exact path="/list" component={List}/>
     <Route exact path="/paper" component={Paper} />
+    <Route exact path="/menu" component={Menu} />
   </AppContainer>
 </Router>);
 
