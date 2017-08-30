@@ -1,0 +1,6 @@
+{
+  "name": "IconMenu",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./IconMenu.js"
+}
