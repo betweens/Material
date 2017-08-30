@@ -73,9 +73,9 @@ const App = () => (<Router>
     <Route exact path="/font-icon" component={FontIcon}/>
     <Route exact path="/svg-icon" component={SvgIcon}/>
     <Route exact path="/list" component={List}/>
+    <Route exact path="/paper" component={Paper} />
     <Route exact path="/menu" component={Menu} />
     <Route exact path="/icon-menu" component={IconMenu} />
-    <Route exact path="/paper" component={Paper} />
   </AppContainer>
 </Router>);
 
