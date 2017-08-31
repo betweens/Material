@@ -42,6 +42,7 @@ import List from './Page/Components/List';
 import Paper from './Page/Components/Paper';
 import Menu from './Page/Components/Menu';
 import IconMenu from './Page/Components/IconMenu';
+import DropDownMenu from './Page/Components/DropDownMenu';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -76,6 +77,7 @@ const App = () => (<Router>
     <Route exact path="/paper" component={Paper} />
     <Route exact path="/menu" component={Menu} />
     <Route exact path="/icon-menu" component={IconMenu} />
+    <Route exact path="/dropdown-menu" component={DropDownMenu} />
   </AppContainer>
 </Router>);
 
