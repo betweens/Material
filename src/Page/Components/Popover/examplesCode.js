@@ -1,4 +1,4 @@
-import React from ' react';
+import React from 'react';
 const simpleExampleCode = `import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import Popover from 'material-ui/Popover';
@@ -336,7 +336,7 @@ const propertiesData = {
     <div>当请求关闭popover时，回调函数被触发。<br />
 
       Signature:<br />
-      <span classNmae="code">function(reason: string) => void</span><br />
+      <span className="code">function(reason: string) => void</span><br />
       reason: 关闭请求的原因。 可能的值是“clickAway”和“offScreen”。
     </div>,
   ], [
