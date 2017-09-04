@@ -1,0 +1,6 @@
+{
+  "name": "CircularProgress",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CircularProgress.js"
+}

@@ -44,6 +44,8 @@ import Menu from './Page/Components/Menu';
 import IconMenu from './Page/Components/IconMenu';
 import DropDownMenu from './Page/Components/DropDownMenu';
 import Popover from './Page/Components/Popover';
+import CircularProgress from './Page/Components/CircularProgress';
+import LinearProgress from './Page/Components/LinearProgress';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -80,6 +82,8 @@ const App = () => (<Router>
     <Route exact path="/icon-menu" component={IconMenu} />
     <Route exact path="/dropdown-menu" component={DropDownMenu} />
     <Route exact path="/popover" component={Popover} />
+    <Route exact path="/circular-progress" component={CircularProgress} />
+    <Route exact path="/linear-progress" component={LinearProgress} />
   </AppContainer>
 </Router>);
 
