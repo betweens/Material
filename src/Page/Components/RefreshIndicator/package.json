@@ -1,0 +1,6 @@
+{
+  "name": "RefreshIndicator",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./RefreshIndicator.js"
+}

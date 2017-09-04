@@ -250,48 +250,48 @@ const Menudata = [
                         "label": "Toggle", 
                         "explain": "切换", 
                         "path": "toggle"
-                    }, 
-                    {
-                        "label": "Snackbars", 
-                        "explain": "Snackbars", 
-                        "path": "snackbars"
-                    }, 
-                    {
-                        "label": "Stepper", 
-                        "explain": "步骤", 
-                        "path": "stepper"
-                    }, 
-                    {
-                        "label": "Subheader", 
-                        "explain": "副标题", 
-                        "path": "subheader"
-                    }, 
-                    {
-                        "label": "Table", 
-                        "explain": "表格", 
-                        "path": "table"
-                    }, 
-                    {
-                        "label": "Tabs", 
-                        "explain": "标签导航", 
-                        "path": "tabs"
-                    }, 
-                    {
-                        "label": "Text Field", 
-                        "explain": "文本域", 
-                        "path": "text-field"
-                    }, 
-                    {
-                        "label": "Time Picker", 
-                        "explain": "时间选择器", 
-                        "path": "time-picker"
-                    }, 
-                    {
-                        "label": "Toolbar", 
-                        "explain": "工具栏", 
-                        "path": "toolbar"
                     }
                 ]
+            }, 
+            {
+                "label": "Snackbars", 
+                "explain": "Snackbars", 
+                "path": "snackbars"
+            }, 
+            {
+                "label": "Stepper", 
+                "explain": "Stepper", 
+                "path": "stepper"
+            }, 
+            {
+                "label": "Subheader", 
+                "explain": "Subheader", 
+                "path": "subheader"
+            }, 
+            {
+                "label": "Table", 
+                "explain": "表格", 
+                "path": "table"
+            }, 
+            {
+                "label": "Tabs", 
+                "explain": "标签导航", 
+                "path": "tabs"
+            }, 
+            {
+                "label": "Text Field", 
+                "explain": "文本域", 
+                "path": "text-field"
+            }, 
+            {
+                "label": "Time Picker", 
+                "explain": "时间选择器", 
+                "path": "time-picker"
+            }, 
+            {
+                "label": "Toolbar", 
+                "explain": "工具栏", 
+                "path": "toolbar"
             }
         ]
     }, 
