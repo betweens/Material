@@ -48,6 +48,7 @@ import CircularProgress from './Page/Components/CircularProgress';
 import LinearProgress from './Page/Components/LinearProgress';
 import RefreshIndicator from './Page/Components/RefreshIndicator';
 import SelectField from './Page/Components/SelectField';
+import Slider from './Page/Components/Slider';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -88,6 +89,7 @@ const App = () => (<Router>
     <Route exact path="/linear-progress" component={LinearProgress} />
     <Route exact path="/refresh-progress" component={RefreshIndicator} />
     <Route exact path="/select-field" component={SelectField} />
+    <Route exact path="/slider" component={Slider} />
   </AppContainer>
 </Router>);
 

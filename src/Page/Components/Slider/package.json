@@ -1,0 +1,6 @@
+{
+  "name": "Slider",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Slider.js"
+}
