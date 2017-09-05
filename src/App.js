@@ -50,6 +50,8 @@ import RefreshIndicator from './Page/Components/RefreshIndicator';
 import SelectField from './Page/Components/SelectField';
 import Slider from './Page/Components/Slider';
 import Checkbox from './Page/Components/Checkbox';
+import RadioButton from './Page/Components/RadioButton';
+import Toggle from './Page/Components/Toggle';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -92,6 +94,8 @@ const App = () => (<Router>
     <Route exact path="/select-field" component={SelectField} />
     <Route exact path="/slider" component={Slider} />
     <Route exact path="/checkbox" component={Checkbox} />
+    <Route exact path="/radio-button" component={RadioButton} />
+    <Route exact path="/toggle" component={Toggle} />
   </AppContainer>
 </Router>);
 

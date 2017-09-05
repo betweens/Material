@@ -37,7 +37,7 @@ class CheckboxPage extends Component {
 		};
     return (<div>
 	      <h2>Checkbox</h2>
-	      <p><a href="">checkbox</a>用于验证您想从组中选择哪些选项。</p>
+	      <p><a href="https://www.google.com/design/spec/components/selection-controls.html#selection-controls-checkbox">checkbox</a>用于验证您想从组中选择哪些选项。</p>
 	      <h3>Examples</h3>
 	      <ContainerPreCode title="Examples">
 	        <PrintCode code={examplesCode} />
