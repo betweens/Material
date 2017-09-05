@@ -197,7 +197,7 @@ const propertiesData = {
         'function',
         '',
         <div>当滑块的值更改时触发的回调函数。<br />
-          Signature:
+          Signature:<br />
           <span className="code">function(event: object, newValue: number) => void</span><br />
           event: KeyDown事件定位滑块。<br />
           newValue: 滑块的最新值。
@@ -207,7 +207,7 @@ const propertiesData = {
         'function',
         '',
         <div>当滑块开始移动时触发的回调函数。<br />
-          Signature:
+          Signature:<br />
           <span className="code">function(event: object) => void</span><br />
           event: MouseDown or TouchStart event targeting the slider.
         </div>,
@@ -216,7 +216,7 @@ const propertiesData = {
         'function',
         '',
         <div>当滑块停止移动时触发的回调函数。<br />
-          Signature:
+          Signature:<br />
           <span className="code">function(event: object) => void</span><br />
           event:  MouseEnd or TouchEnd event targeting the slider.
         </div>,

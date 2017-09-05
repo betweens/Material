@@ -49,6 +49,7 @@ import LinearProgress from './Page/Components/LinearProgress';
 import RefreshIndicator from './Page/Components/RefreshIndicator';
 import SelectField from './Page/Components/SelectField';
 import Slider from './Page/Components/Slider';
+import Checkbox from './Page/Components/Checkbox';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -90,6 +91,7 @@ const App = () => (<Router>
     <Route exact path="/refresh-progress" component={RefreshIndicator} />
     <Route exact path="/select-field" component={SelectField} />
     <Route exact path="/slider" component={Slider} />
+    <Route exact path="/checkbox" component={Checkbox} />
   </AppContainer>
 </Router>);
 

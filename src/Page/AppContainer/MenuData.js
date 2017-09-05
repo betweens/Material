@@ -239,7 +239,7 @@ const Menudata = [
                     {
                         "label": "CheckBox", 
                         "explain": "复选框", 
-                        "path": "checkBox"
+                        "path": "checkbox"
                     }, 
                     {
                         "label": "Radio Button", 
