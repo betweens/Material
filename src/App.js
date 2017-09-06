@@ -52,6 +52,7 @@ import Slider from './Page/Components/Slider';
 import Checkbox from './Page/Components/Checkbox';
 import RadioButton from './Page/Components/RadioButton';
 import Toggle from './Page/Components/Toggle';
+import Snackbar from './Page/Components/Snackbar';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -96,6 +97,7 @@ const App = () => (<Router>
     <Route exact path="/checkbox" component={Checkbox} />
     <Route exact path="/radio-button" component={RadioButton} />
     <Route exact path="/toggle" component={Toggle} />
+    <Route exact path="/snackbars" component={Snackbar} />
   </AppContainer>
 </Router>);
 

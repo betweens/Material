@@ -1,0 +1,6 @@
+{
+  "name": "Snackbar",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Snackbar.js"
+}
