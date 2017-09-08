@@ -55,6 +55,7 @@ import Toggle from './Page/Components/Toggle';
 import Snackbar from './Page/Components/Snackbar';
 import Stepper from './Page/Components/Stepper';
 import Subheader from './Page/Components/Subheader';
+import Toolbar from './Page/Components/Toolbar';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -102,6 +103,7 @@ const App = () => (<Router>
     <Route exact path="/snackbars" component={Snackbar} />
     <Route exact path="/stepper" component={Stepper} />
     <Route exact path="/subheader" component={Subheader} />
+    <Route exact path="/toolbar" component={Toolbar} />
   </AppContainer>
 </Router>);
 
