@@ -13,7 +13,7 @@ const PropertiesList = (props) => {
 		})
 		return <tr key={j}>{bodyList}</tr>;
 	})
-  return (<table>
+  return (<table className="table-proprety">
     <thead><tr>{headerRow}</tr></thead>
     <tbody>{bodyRow}</tbody>
   </table>)
