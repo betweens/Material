@@ -1,0 +1,6 @@
+{
+  "name": "Showcase",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Showcase.js"
+}

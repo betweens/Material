@@ -104,9 +104,9 @@ class AppContainer extends Component {
     	<List>
     	  {OutMenu}
     	  <hr />
-    	  <ListItem key={1} primaryText="GitHub" />
-    	  <ListItem key={2} primaryText="React" />
-    	  <ListItem key={3} primaryText="Material Design" />
+    	  <ListItem key={1} children={<a href="https://github.com/betweens/Material">GitHub</a>}/>
+    	  <ListItem key={2} children={<a href="https://facebook.github.io/react/">React</a>}/>
+    	  <ListItem key={3} children={<a href="https://material.io/guidelines/material-design/introduction.html">Material Design</a>}/>
     	</List>
     </Drawer>
    <div className="markdown-body" style={noBodyPadding}>{this.props.children}</div>

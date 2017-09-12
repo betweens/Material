@@ -60,6 +60,12 @@ import Table from './Page/Components/Table';
 import Tabs from './Page/Components/Tabs';
 import TextField from './Page/Components/TextField';
 import TimePicker from './Page/Components/TimePicker';
+
+// 发现更多 DiscoverMore
+import Community from './Page/DiscoverMore/Community';
+import Contributing from './Page/DiscoverMore/Contributing';
+import Relatedprojects from './Page/DiscoverMore/Relatedprojects';
+import Showcase from './Page/DiscoverMore/Showcase';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -112,6 +118,10 @@ const App = () => (<Router>
     <Route exact path="/tabs" component={Tabs} />
     <Route exact path="/text-field" component={TextField} />
     <Route exact path="/time-picker" component={TimePicker} />
+    <Route exact path="/community" component={Community} />
+    <Route exact path="/contributing" component={Contributing} />
+    <Route exact path="/related-projects" component={Relatedprojects} />
+    <Route exact path="/showcase" component={Showcase} />
   </AppContainer>
 </Router>);
 
