@@ -58,6 +58,7 @@ import Subheader from './Page/Components/Subheader';
 import Toolbar from './Page/Components/Toolbar';
 import Table from './Page/Components/Table';
 import Tabs from './Page/Components/Tabs';
+import TextField from './Page/Components/TextField';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -108,6 +109,7 @@ const App = () => (<Router>
     <Route exact path="/toolbar" component={Toolbar} />
     <Route exact path="/table" component={Table} />
     <Route exact path="/tabs" component={Tabs} />
+    <Route exact path="/text-field" component={TextField} />
   </AppContainer>
 </Router>);
 
