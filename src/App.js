@@ -59,6 +59,7 @@ import Toolbar from './Page/Components/Toolbar';
 import Table from './Page/Components/Table';
 import Tabs from './Page/Components/Tabs';
 import TextField from './Page/Components/TextField';
+import TimePicker from './Page/Components/TimePicker';
 // 路由集合
 const App = () => (<Router>
   <AppContainer>
@@ -110,6 +111,7 @@ const App = () => (<Router>
     <Route exact path="/table" component={Table} />
     <Route exact path="/tabs" component={Tabs} />
     <Route exact path="/text-field" component={TextField} />
+    <Route exact path="/time-picker" component={TimePicker} />
   </AppContainer>
 </Router>);
 
